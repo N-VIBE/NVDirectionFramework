@@ -1,0 +1,4 @@
+framework module NVDirectionKit {
+  header "NVDirectionKit-Swift.h"
+  requires objc
+}
