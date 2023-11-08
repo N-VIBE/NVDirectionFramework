@@ -26,10 +26,7 @@
         "name": "Polyline",
         "printedName": "Polyline",
         "declKind": "Import",
-        "moduleName": "NVDirectionKit",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "NVDirectionKit"
       },
       {
         "kind": "TypeDecl",
@@ -1901,6 +1898,57 @@
                 "declKind": "Accessor",
                 "usr": "s:14NVDirectionKit0A0C6sharedACvgZ",
                 "mangledName": "$s14NVDirectionKit0A0C6sharedACvgZ",
+                "moduleName": "NVDirectionKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "versionNumber",
+            "printedName": "versionNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14NVDirectionKit0A0C13versionNumberSSvpZ",
+            "mangledName": "$s14NVDirectionKit0A0C13versionNumberSSvpZ",
+            "moduleName": "NVDirectionKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit0A0C13versionNumberSSvgZ",
+                "mangledName": "$s14NVDirectionKit0A0C13versionNumberSSvgZ",
                 "moduleName": "NVDirectionKit",
                 "static": true,
                 "implicit": true,
@@ -9470,385 +9518,385 @@
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 387,
+      "offset": 291,
       "length": 7,
       "value": "\"fr-FR\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 489,
+      "offset": 393,
       "length": 13,
       "value": "\"routability\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 873,
+      "offset": 777,
       "length": 6,
       "value": "5000.0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 963,
+      "offset": 867,
       "length": 3,
       "value": "1e6"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "Array",
-      "offset": 983,
+      "offset": 887,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1000,
+      "offset": 904,
       "length": 55,
       "value": "\"======================== GPX ========================\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1071,
+      "offset": 975,
       "length": 25,
       "value": "\"<?xml version=\"1.0\"?>\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1112,
+      "offset": 1016,
       "length": 41,
       "value": "\"<gpx version=\"1.1\" creator=\"Xcode\">\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 1178,
+      "offset": 1082,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 1433,
+      "offset": 1337,
       "length": 4,
       "value": "3600"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1533,
+      "offset": 1437,
       "length": 74,
       "value": "\"    <wpt lat=\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1571,
+      "offset": 1475,
       "length": 1,
       "value": "\"\" lon=\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1603,
+      "offset": 1507,
       "length": 1,
       "value": "\"\">\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1627,
+      "offset": 1531,
       "length": 65,
       "value": "\"        <time>2014-09-24T\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1683,
+      "offset": 1587,
       "length": 1,
       "value": "\"Z<\/time>\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1712,
+      "offset": 1616,
       "length": 12,
       "value": "\"    <\/wpt>\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1759,
+      "offset": 1663,
       "length": 8,
       "value": "\"<\/gpx>\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1816,
+      "offset": 1720,
       "length": 20,
       "value": "\"weight ::\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1835,
+      "offset": 1739,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1852,
+      "offset": 1756,
       "length": 28,
       "value": "\"voiceLocal ::\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1879,
+      "offset": 1783,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1896,
+      "offset": 1800,
       "length": 24,
       "value": "\"duration ::\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1919,
+      "offset": 1823,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1936,
+      "offset": 1840,
       "length": 24,
       "value": "\"distance ::\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1959,
+      "offset": 1863,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1976,
+      "offset": 1880,
       "length": 16,
       "value": "\"legs ::\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 1991,
+      "offset": 1895,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2008,
+      "offset": 1912,
       "length": 24,
       "value": "\"geometry ::\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2031,
+      "offset": 1935,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "BooleanLiteral",
-      "offset": 2088,
+      "offset": 1992,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "Array",
-      "offset": 2170,
+      "offset": 2074,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2281,
+      "offset": 2185,
       "length": 8,
       "value": "\"weight\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2319,
+      "offset": 2223,
       "length": 12,
       "value": "\"voiceLocal\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2365,
+      "offset": 2269,
       "length": 10,
       "value": "\"duration\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2407,
+      "offset": 2311,
       "length": 10,
       "value": "\"distance\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2449,
+      "offset": 2353,
       "length": 13,
       "value": "\"weight_name\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2497,
+      "offset": 2401,
       "length": 10,
       "value": "\"geometry\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2539,
+      "offset": 2443,
       "length": 6,
       "value": "\"legs\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "Array",
-      "offset": 2608,
+      "offset": 2512,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "BooleanLiteral",
-      "offset": 2687,
+      "offset": 2591,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2730,
+      "offset": 2634,
       "length": 8,
       "value": "\"weight\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2768,
+      "offset": 2672,
       "length": 12,
       "value": "\"voiceLocal\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2814,
+      "offset": 2718,
       "length": 10,
       "value": "\"duration\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2856,
+      "offset": 2760,
       "length": 10,
       "value": "\"distance\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2898,
+      "offset": 2802,
       "length": 10,
       "value": "\"geometry\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2940,
+      "offset": 2844,
       "length": 6,
       "value": "\"legs\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 3249,
+      "offset": 3153,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 4918,
+      "offset": 4822,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 5490,
+      "offset": 5394,
       "length": 3,
       "value": "1e6"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 5546,
+      "offset": 5450,
       "length": 8,
       "value": "\"depart\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "Array",
-      "offset": 5715,
+      "offset": 5619,
       "length": 6,
       "value": "[true]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 5805,
+      "offset": 5709,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 5949,
+      "offset": 5853,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 6134,
+      "offset": 6038,
       "length": 3,
       "value": "1e6"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/WalkingRoute\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 303,
+      "offset": 207,
       "length": 10,
       "value": "\"NVDirectionKit.NVibeRoute\""
     },
@@ -10309,15 +10357,22 @@
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirectionKit.swift",
+      "kind": "StringLiteral",
+      "offset": 250,
+      "length": 7,
+      "value": "\"0.1.2\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirectionKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 475,
+      "offset": 521,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirectionKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 1103,
+      "offset": 1149,
       "length": 1,
       "value": "1"
     },
