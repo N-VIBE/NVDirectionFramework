@@ -381,12 +381,6 @@ SWIFT_CLASS("_TtC14NVDirectionKit23NVibeWalkingInformation")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, TokenError, open) {
-  TokenErrorINVALID_TOKEN = 0,
-  TokenErrorMAX_ACTIVE_USER_REACHED = 1,
-  TokenErrorUNKNOW = 2,
-};
-
 #endif
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -777,12 +771,6 @@ SWIFT_CLASS("_TtC14NVDirectionKit23NVibeWalkingInformation")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-typedef SWIFT_ENUM(NSInteger, TokenError, open) {
-  TokenErrorINVALID_TOKEN = 0,
-  TokenErrorMAX_ACTIVE_USER_REACHED = 1,
-  TokenErrorUNKNOW = 2,
-};
 
 #endif
 #if __has_attribute(external_source_symbol)

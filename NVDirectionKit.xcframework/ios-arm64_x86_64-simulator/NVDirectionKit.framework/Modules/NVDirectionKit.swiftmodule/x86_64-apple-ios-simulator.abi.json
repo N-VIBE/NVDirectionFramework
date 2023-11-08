@@ -1621,7 +1621,7 @@
                     "kind": "TypeNominal",
                     "name": "TokenError",
                     "printedName": "NVDirectionKit.TokenError",
-                    "usr": "c:@M@NVDirectionKit@E@TokenError"
+                    "usr": "s:14NVDirectionKit10TokenErrorO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1632,7 +1632,7 @@
                         "kind": "TypeNominal",
                         "name": "TokenError",
                         "printedName": "NVDirectionKit.TokenError",
-                        "usr": "c:@M@NVDirectionKit@E@TokenError"
+                        "usr": "s:14NVDirectionKit10TokenErrorO"
                       }
                     ]
                   }
@@ -1640,13 +1640,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@NVDirectionKit@E@TokenError@TokenErrorINVALID_TOKEN",
+            "usr": "s:14NVDirectionKit10TokenErrorO13INVALID_TOKENyA2CmF",
             "mangledName": "$s14NVDirectionKit10TokenErrorO13INVALID_TOKENyA2CmF",
-            "moduleName": "NVDirectionKit",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 0
+            "moduleName": "NVDirectionKit"
           },
           {
             "kind": "Var",
@@ -1662,7 +1658,7 @@
                     "kind": "TypeNominal",
                     "name": "TokenError",
                     "printedName": "NVDirectionKit.TokenError",
-                    "usr": "c:@M@NVDirectionKit@E@TokenError"
+                    "usr": "s:14NVDirectionKit10TokenErrorO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1673,7 +1669,7 @@
                         "kind": "TypeNominal",
                         "name": "TokenError",
                         "printedName": "NVDirectionKit.TokenError",
-                        "usr": "c:@M@NVDirectionKit@E@TokenError"
+                        "usr": "s:14NVDirectionKit10TokenErrorO"
                       }
                     ]
                   }
@@ -1681,13 +1677,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@NVDirectionKit@E@TokenError@TokenErrorMAX_ACTIVE_USER_REACHED",
+            "usr": "s:14NVDirectionKit10TokenErrorO23MAX_ACTIVE_USER_REACHEDyA2CmF",
             "mangledName": "$s14NVDirectionKit10TokenErrorO23MAX_ACTIVE_USER_REACHEDyA2CmF",
-            "moduleName": "NVDirectionKit",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
+            "moduleName": "NVDirectionKit"
           },
           {
             "kind": "Var",
@@ -1703,7 +1695,7 @@
                     "kind": "TypeNominal",
                     "name": "TokenError",
                     "printedName": "NVDirectionKit.TokenError",
-                    "usr": "c:@M@NVDirectionKit@E@TokenError"
+                    "usr": "s:14NVDirectionKit10TokenErrorO"
                   },
                   {
                     "kind": "TypeNominal",
@@ -1714,7 +1706,7 @@
                         "kind": "TypeNominal",
                         "name": "TokenError",
                         "printedName": "NVDirectionKit.TokenError",
-                        "usr": "c:@M@NVDirectionKit@E@TokenError"
+                        "usr": "s:14NVDirectionKit10TokenErrorO"
                       }
                     ]
                   }
@@ -1722,13 +1714,9 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "c:@M@NVDirectionKit@E@TokenError@TokenErrorUNKNOW",
+            "usr": "s:14NVDirectionKit10TokenErrorO6UNKNOWyA2CmF",
             "mangledName": "$s14NVDirectionKit10TokenErrorO6UNKNOWyA2CmF",
-            "moduleName": "NVDirectionKit",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 2
+            "moduleName": "NVDirectionKit"
           },
           {
             "kind": "Constructor",
@@ -1744,7 +1732,7 @@
                     "kind": "TypeNominal",
                     "name": "TokenError",
                     "printedName": "NVDirectionKit.TokenError",
-                    "usr": "c:@M@NVDirectionKit@E@TokenError"
+                    "usr": "s:14NVDirectionKit10TokenErrorO"
                   }
                 ],
                 "usr": "s:Sq"
@@ -1804,12 +1792,11 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "c:@M@NVDirectionKit@E@TokenError",
+        "usr": "s:14NVDirectionKit10TokenErrorO",
         "mangledName": "$s14NVDirectionKit10TokenErrorO",
         "moduleName": "NVDirectionKit",
         "declAttributes": [
-          "AccessControl",
-          "ObjC"
+          "AccessControl"
         ],
         "enumRawTypeName": "Int",
         "conformances": [
@@ -10183,119 +10170,133 @@
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 420,
+      "offset": 414,
       "length": 23,
       "value": "1"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 453,
+      "offset": 447,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 420,
+      "offset": 414,
       "length": 23,
       "value": "1"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 453,
+      "offset": 447,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 414,
+      "length": 23,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 447,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 798,
+      "offset": 792,
       "length": 9,
       "value": "\"USER_ID\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 958,
+      "offset": 952,
       "length": 71,
       "value": "\"http:\/\/sdk-api.n-vibe.com?token=\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 1023,
+      "offset": 1017,
       "length": 4,
       "value": "\"na\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 1028,
+      "offset": 1022,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 1085,
+      "offset": 1079,
       "length": 11,
       "value": "\"&id=\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 1095,
+      "offset": 1089,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 1564,
+      "offset": 1558,
       "length": 6,
       "value": "\"code\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1585,
+      "offset": 1579,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1658,
+      "offset": 1652,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 1708,
+      "offset": 1702,
       "length": 9,
       "value": "\"user_id\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1943,
+      "offset": 1937,
       "length": 3,
       "value": "403"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2128,
+      "offset": 2122,
       "length": 3,
       "value": "429"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Manager\/TokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3005,
+      "offset": 2999,
       "length": 1,
       "value": "0"
     },

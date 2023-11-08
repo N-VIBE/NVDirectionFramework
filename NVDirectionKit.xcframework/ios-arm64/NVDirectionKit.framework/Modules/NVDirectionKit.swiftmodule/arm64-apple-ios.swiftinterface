@@ -33,7 +33,7 @@ import _SwiftConcurrencyShims
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@objc public enum TokenError : Swift.Int {
+public enum TokenError : Swift.Int {
   case INVALID_TOKEN
   case MAX_ACTIVE_USER_REACHED
   case UNKNOW
