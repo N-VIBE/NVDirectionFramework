@@ -305,6 +305,20 @@ SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
+@interface NVPhoneStateDetection : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
+@interface NVSDKTokenValidation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit17NVibeIntersection")
 @interface NVibeIntersection : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -347,6 +361,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit19NVibeMultimodalStep")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit30NVibeMultimodalStepInformation")
+@interface NVibeMultimodalStepInformation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit10NVibeRoute")
 @interface NVibeRoute : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -362,9 +383,7 @@ SWIFT_CLASS("_TtC14NVDirectionKit9NVibeStep")
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit23NVibeTransitInformation")
-@interface NVibeTransitInformation : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@interface NVibeTransitInformation : NVibeMultimodalStepInformation
 @end
 
 
@@ -376,9 +395,7 @@ SWIFT_CLASS("_TtC14NVDirectionKit14NVibeVibration")
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit23NVibeWalkingInformation")
-@interface NVibeWalkingInformation : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@interface NVibeWalkingInformation : NVibeMultimodalStepInformation
 @end
 
 #endif
@@ -696,6 +713,20 @@ SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
+@interface NVPhoneStateDetection : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
+@interface NVSDKTokenValidation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit17NVibeIntersection")
 @interface NVibeIntersection : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -738,6 +769,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit19NVibeMultimodalStep")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit30NVibeMultimodalStepInformation")
+@interface NVibeMultimodalStepInformation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit10NVibeRoute")
 @interface NVibeRoute : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -753,9 +791,7 @@ SWIFT_CLASS("_TtC14NVDirectionKit9NVibeStep")
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit23NVibeTransitInformation")
-@interface NVibeTransitInformation : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@interface NVibeTransitInformation : NVibeMultimodalStepInformation
 @end
 
 
@@ -767,9 +803,7 @@ SWIFT_CLASS("_TtC14NVDirectionKit14NVibeVibration")
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit23NVibeWalkingInformation")
-@interface NVibeWalkingInformation : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@interface NVibeWalkingInformation : NVibeMultimodalStepInformation
 @end
 
 #endif
