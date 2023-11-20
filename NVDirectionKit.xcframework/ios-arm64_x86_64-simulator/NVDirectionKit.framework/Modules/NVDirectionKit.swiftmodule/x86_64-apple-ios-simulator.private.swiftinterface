@@ -109,7 +109,6 @@ extension CoreLocation.CLDeviceOrientation {
   public var legs: [NVDirectionKit.NVibeLeg]
   public var geometry: Swift.String
   public init(language: Swift.String = "en", weight: Swift.Double, duration: Swift.Double, distance: Swift.Double, legs: [NVDirectionKit.NVibeLeg], geometry: Swift.String)
-  public init(language: Swift.String = "en", coordinates: [CoreLocation.CLLocationCoordinate2D])
   public func toDictionnary(full: Swift.Bool = true) -> [Swift.String : Any]
   public func deleteFirstStep() -> NVDirectionKit.NVibeRoute
   @objc deinit
