@@ -319,6 +319,18 @@ SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit13NVibeLocation")
+@interface NVibeLocation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC14NVDirectionKit19NVibeIndoorLocation")
+@interface NVibeIndoorLocation : NVibeLocation
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit17NVibeIntersection")
 @interface NVibeIntersection : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -332,12 +344,6 @@ SWIFT_CLASS("_TtC14NVDirectionKit8NVibeLeg")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-SWIFT_CLASS("_TtC14NVDirectionKit13NVibeLocation")
-@interface NVibeLocation : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit13NVibeManeuver")

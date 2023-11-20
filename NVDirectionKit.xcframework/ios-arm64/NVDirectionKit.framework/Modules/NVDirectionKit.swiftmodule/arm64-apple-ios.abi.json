@@ -4452,6 +4452,395 @@
       },
       {
         "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "NVDirectionKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NVibeIndoorLocation",
+        "printedName": "NVibeIndoorLocation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "floor",
+            "printedName": "floor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14NVDirectionKit19NVibeIndoorLocationC5floorSivp",
+            "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC5floorSivp",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit19NVibeIndoorLocationC5floorSivg",
+                "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC5floorSivg",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit19NVibeIndoorLocationC5floorSivs",
+                "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC5floorSivs",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit19NVibeIndoorLocationC5floorSivM",
+                "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC5floorSivM",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "altitude",
+            "printedName": "altitude",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvp",
+            "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvp",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvg",
+                "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvg",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvs",
+                "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvs",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvM",
+                "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC8altitudeSdvM",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(address:position:access:floor:altitude:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NVibeIndoorLocation",
+                "printedName": "NVDirectionKit.NVibeIndoorLocation",
+                "usr": "c:@M@NVDirectionKit@objc(cs)NVibeIndoorLocation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLLocationCoordinate2D",
+                "printedName": "CoreLocation.CLLocationCoordinate2D",
+                "usr": "c:@S@CLLocationCoordinate2D"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreLocation.CLLocationCoordinate2D?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLLocationCoordinate2D",
+                    "printedName": "CoreLocation.CLLocationCoordinate2D",
+                    "usr": "c:@S@CLLocationCoordinate2D"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14NVDirectionKit19NVibeIndoorLocationC7address8position6access5floor8altitudeACSSSg_So22CLLocationCoordinate2DVAKSgSiSdtcfc",
+            "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC7address8position6access5floor8altitudeACSSSg_So22CLLocationCoordinate2DVAKSgSiSdtcfc",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(address:position:access:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NVibeIndoorLocation",
+                "printedName": "NVDirectionKit.NVibeIndoorLocation",
+                "usr": "c:@M@NVDirectionKit@objc(cs)NVibeIndoorLocation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLLocationCoordinate2D",
+                "printedName": "CoreLocation.CLLocationCoordinate2D",
+                "usr": "c:@S@CLLocationCoordinate2D"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreLocation.CLLocationCoordinate2D?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLLocationCoordinate2D",
+                    "printedName": "CoreLocation.CLLocationCoordinate2D",
+                    "usr": "c:@S@CLLocationCoordinate2D"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14NVDirectionKit19NVibeIndoorLocationC7address8position6accessACSSSg_So22CLLocationCoordinate2DVAISgtcfc",
+            "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC7address8position6accessACSSSg_So22CLLocationCoordinate2DVAISgtcfc",
+            "moduleName": "NVDirectionKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@NVDirectionKit@objc(cs)NVibeIndoorLocation",
+        "mangledName": "$s14NVDirectionKit19NVibeIndoorLocationC",
+        "moduleName": "NVDirectionKit",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@NVDirectionKit@objc(cs)NVibeLocation",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "NVDirectionKit.NVibeLocation",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "NVDirectionKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -15059,7 +15448,7 @@
       "kind": "StringLiteral",
       "offset": 125,
       "length": 7,
-      "value": "\"0.1.4\""
+      "value": "\"0.1.5\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirection.swift",
@@ -15515,6 +15904,27 @@
       "offset": 207,
       "length": 10,
       "value": "\"NVDirectionKit.NVibeRoute\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeIndoorLocation.swift",
+      "kind": "FloatLiteral",
+      "offset": 398,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeIndoorLocation.swift",
+      "kind": "StringLiteral",
+      "offset": 154,
+      "length": 19,
+      "value": "\"NVDirectionKit.NVibeIndoorLocation\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeIndoorLocation.swift",
+      "kind": "StringLiteral",
+      "offset": 154,
+      "length": 19,
+      "value": "\"NVDirectionKit.NVibeIndoorLocation\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Bluetooth\/NVibeVibration.swift",

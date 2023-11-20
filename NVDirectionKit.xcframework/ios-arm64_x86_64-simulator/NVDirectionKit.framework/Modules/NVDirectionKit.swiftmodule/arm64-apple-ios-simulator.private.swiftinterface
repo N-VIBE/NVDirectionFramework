@@ -116,6 +116,12 @@ extension CoreLocation.CLDeviceOrientation {
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+@objc @_hasMissingDesignatedInitializers open class NVibeIndoorLocation : NVDirectionKit.NVibeLocation {
+  public var floor: Swift.Int
+  public var altitude: Swift.Double
+  public init(address: Swift.String? = nil, position: CoreLocation.CLLocationCoordinate2D, access: CoreLocation.CLLocationCoordinate2D? = nil, floor: Swift.Int, altitude: Swift.Double = 0.0)
+  @objc deinit
+}
 public enum BluetoothCommand : Swift.String, Swift.Codable {
   case SHORT_VIBRATION
   case UTURN_VIBRATION
