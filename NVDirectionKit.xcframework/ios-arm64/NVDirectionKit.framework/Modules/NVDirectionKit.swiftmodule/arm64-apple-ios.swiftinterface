@@ -7,6 +7,7 @@ import CoreLocation
 import CoreML
 import CoreMotion
 import Foundation
+@_exported import NVDirectionKit
 import Polyline
 import Swift
 import SwiftyJSON
@@ -44,7 +45,7 @@ import _SwiftConcurrencyShims
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, walkingMode: NVDirectionKit.NVibeWalkingInformation.Mode)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers open class NVibeTransitInformation : NVDirectionKit.NVibeMultimodalStepInformation {
+@objc open class NVibeTransitInformation : NVDirectionKit.NVibeMultimodalStepInformation {
   public enum Mode : Swift.String {
     case TRAM
     case TRAIN
@@ -66,6 +67,12 @@ import _SwiftConcurrencyShims
   public var departureTime: Swift.String
   public var duration: Swift.Double
   public init(transitMode: NVDirectionKit.NVibeTransitInformation.Mode, headsign: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, type: Swift.String, line: Swift.String, stops: [NVDirectionKit.NVibeLocation], departureTime: Swift.String, duration: Swift.Double)
+  public init(transitMode: Swift.String, headsign: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, type: Swift.String, line: Swift.String, stops: [NVDirectionKit.NVibeLocation], departureTime: Swift.String, duration: Swift.Double, id: Swift.String)
+  public func stopNumber() -> Swift.Int
+  public func departureStop() -> NVDirectionKit.NVibeLocation
+  public func arrivalStop() -> NVDirectionKit.NVibeLocation
+  public func getDistance() -> Swift.Int
+  public func getDuration() -> Swift.Double
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers open class NVibeLocation : ObjectiveC.NSObject {
@@ -90,22 +97,59 @@ extension CoreLocation.CLDeviceOrientation {
   public func getMultimodalRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, includeFullWalking: Swift.Bool = true, completion: @escaping ([NVDirectionKit.NVibeMultimodalRoute]?, NVDirectionKit.RouteError?) -> Swift.Void)
   public func getNextDeparture(from information: NVDirectionKit.NVibeTransitInformation, count: Swift.Int = 1, completion: @escaping ([Swift.String]) -> Swift.Void)
   public func getStartingDirection(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, completion: @escaping (CoreLocation.CLLocationDirection?, NVDirectionKit.RouteError?) -> Swift.Void)
-  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, completion: @escaping ((departure: NVDirectionKit.NVibeLocation, arrival: NVDirectionKit.NVibeLocation, route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", completion: @escaping ((departure: NVDirectionKit.NVibeLocation, arrival: NVDirectionKit.NVibeLocation, route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func cancelRoute()
   @objc override dynamic public init()
   @objc deinit
 }
 @objc open class NVibeRoute : ObjectiveC.NSObject, Swift.Codable {
+  public var language: Swift.String
   public var duration: Swift.Double
   public var distance: Swift.Double
   public var legs: [NVDirectionKit.NVibeLeg]
   public var geometry: Swift.String
-  public init(weight: Swift.Double, duration: Swift.Double, distance: Swift.Double, legs: [NVDirectionKit.NVibeLeg], geometry: Swift.String)
+  public init(language: Swift.String = "en", weight: Swift.Double, duration: Swift.Double, distance: Swift.Double, legs: [NVDirectionKit.NVibeLeg], geometry: Swift.String)
+  public init(language: Swift.String = "en", coordinates: [CoreLocation.CLLocationCoordinate2D])
   public func toDictionnary(full: Swift.Bool = true) -> [Swift.String : Any]
+  public func deleteFirstStep() -> NVDirectionKit.NVibeRoute
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_hasMissingDesignatedInitializers open class NVibeVibration : ObjectiveC.NSObject, Swift.Codable {
+public enum BluetoothCommand : Swift.String, Swift.Codable {
+  case SHORT_VIBRATION
+  case UTURN_VIBRATION
+  case LONG_VIBRATION
+  case LONG_CROSS_VIBRATION
+  case DOUBLE_VIBRATION
+  case TRIPLE_VIBRATION_FAST
+  case TRIPLE_VIBRATION
+  case TRIPLE_VIBRATION_AND_SHORT
+  case QUINTUPLE_VIBRATION
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BluetoothType : Swift.String, Swift.Codable {
+  case LEFT
+  case RIGHT
+  case BOTH
+  case ALTERNATE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc open class NVibeVibration : ObjectiveC.NSObject, Swift.Codable {
+  public var type: NVDirectionKit.BluetoothType
+  public var command: NVDirectionKit.BluetoothCommand
+  public var delay: Swift.Double
+  public init(type: NVDirectionKit.BluetoothType, command: NVDirectionKit.BluetoothCommand, delay: Swift.Double = 0.0)
+  public static func getBluetoothCommand(text: Swift.String) -> NVDirectionKit.BluetoothCommand
+  public static func getBluetoothType(text: Swift.String) -> NVDirectionKit.BluetoothType
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -132,6 +176,10 @@ extension CoreLocation.CLDeviceOrientation {
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
+  public var bearing_after: Swift.Double
+  public var bearing_before: Swift.Double
+  public var type: Swift.String
+  public var modifier: Swift.String?
   public var location: [Swift.Double]
   public var instruction: Swift.String
   @objc deinit
@@ -236,8 +284,10 @@ extension Foundation.NSNotification.Name {
   public var mode: Swift.String
   public var geometry: Swift.String
   public var maneuver: NVDirectionKit.NVibeManeuver
+  public var driving_side: Swift.String
   public var duration: Swift.Double
   public var name: Swift.String
+  public var vibrations: [NVDirectionKit.NVibeVibration]
   public var starting_side: Swift.String {
     get
     set
@@ -257,6 +307,12 @@ extension NVDirectionKit.NVibeWalkingInformation.Mode : Swift.RawRepresentable {
 extension NVDirectionKit.NVibeTransitInformation.Mode : Swift.Equatable {}
 extension NVDirectionKit.NVibeTransitInformation.Mode : Swift.Hashable {}
 extension NVDirectionKit.NVibeTransitInformation.Mode : Swift.RawRepresentable {}
+extension NVDirectionKit.BluetoothCommand : Swift.Equatable {}
+extension NVDirectionKit.BluetoothCommand : Swift.Hashable {}
+extension NVDirectionKit.BluetoothCommand : Swift.RawRepresentable {}
+extension NVDirectionKit.BluetoothType : Swift.Equatable {}
+extension NVDirectionKit.BluetoothType : Swift.Hashable {}
+extension NVDirectionKit.BluetoothType : Swift.RawRepresentable {}
 extension NVDirectionKit.RouteError : Swift.Equatable {}
 extension NVDirectionKit.RouteError : Swift.Hashable {}
 extension NVDirectionKit.SideStreet : Swift.Equatable {}

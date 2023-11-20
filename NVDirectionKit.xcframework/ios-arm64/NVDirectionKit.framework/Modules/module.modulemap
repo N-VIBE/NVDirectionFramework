@@ -1,4 +1,11 @@
 framework module NVDirectionKit {
+  umbrella header "NVDirectionKit.h"
+  export *
+
+  module * { export * }
+}
+
+module NVDirectionKit.Swift {
   header "NVDirectionKit-Swift.h"
   requires objc
 }

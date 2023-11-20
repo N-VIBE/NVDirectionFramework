@@ -8,53 +8,57 @@
 		<data>
 		Of5XCz14FpNzW6m7etTHvWhbIio=
 		</data>
+		<key>Headers/NVDirectionKit.h</key>
+		<data>
+		ingjEJMHCof5aS+5npbhpQSQ0SQ=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		DvdXZlAubMNDUuk3JuC3K5MIUy4=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		LmnSCUZfabQb1Okj2aoqxkQJFS8=
+		mlQS3BLxfAAYa+AW2Pu8Sk8Xzy8=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		qTKFeEVykYXCX35TYGb44/4AnnQ=
+		+/FYPPBSy81iY0fg8xG8FZGIQ5s=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		li2L+cPh0J7rU7K6dSBEdovbd7s=
+		EVIdDeS9g3MqJE4szFzJyU2RZco=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qTKFeEVykYXCX35TYGb44/4AnnQ=
+		+/FYPPBSy81iY0fg8xG8FZGIQ5s=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		btGAHKNYyJcPHDm5LSqF+wsujHU=
+		7kiTJAe4UbCqMfaKuvSRilovNZA=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		LmnSCUZfabQb1Okj2aoqxkQJFS8=
+		mlQS3BLxfAAYa+AW2Pu8Sk8Xzy8=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		o4u20lG89bvsl622xXTd5w3v4d4=
+		4/nboawhNUdsd0cFtYmWp6tUzAY=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		/rKtpbRGLiUk3K3bG3EEhVIB+2U=
+		rHZwQnU6MoBqCqLUBUQDlrERb4M=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		o4u20lG89bvsl622xXTd5w3v4d4=
+		4/nboawhNUdsd0cFtYmWp6tUzAY=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		K8OT7pZgXkMUHBRXL42jbtupRf4=
+		WSIdl760zUDe5T0baWgsdbA4a2E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		0TWpzxYIBspsWUYoEbw1SmUr9Hw=
+		aA9kblm5hj+5ofQWc53QzOY/r0Y=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -66,81 +70,88 @@
 			vT/h0bq41qe66s1s4kRoX5FSpJdk2KYGOQrAIRn3HPg=
 			</data>
 		</dict>
+		<key>Headers/NVDirectionKit.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CZzpC50HwiF7aGtJUNqXmKop40EPr0QIHxOnC8SVQHw=
+			</data>
+		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9YpsXFTZU6JoNcVprKRPs/tfegxuJoICnMcGkzs76WU=
+			38mbEyeWVMCPnNnYMGywwIr2h9U+PLE0LeyvkKy23hE=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUs3KM+sn6wd+RTt7IcQHDfqLVaKNl5tAEYT3Foj5to=
+			OVFionDzngsfHpmmTfdM3H/4oaQvAJ0mwr2KzrctHmg=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S4BZj+s8Exyp63+/FyWG99/XIE9Q+4SWpeAUvuq9jNk=
+			JFtV9Wi6WQqfWJEJ2VRqfMo4Uw2UEJEkKRpjjP+vDOM=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUs3KM+sn6wd+RTt7IcQHDfqLVaKNl5tAEYT3Foj5to=
+			OVFionDzngsfHpmmTfdM3H/4oaQvAJ0mwr2KzrctHmg=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tNAk18xyu0ppzfg/hz3HQ3a9czWrhtDCNkoW2SRnb2U=
+			+dXMPpqUkYL5mXY6d7ERauygCGM6Xks+Sv8yEUlNmZA=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9YpsXFTZU6JoNcVprKRPs/tfegxuJoICnMcGkzs76WU=
+			38mbEyeWVMCPnNnYMGywwIr2h9U+PLE0LeyvkKy23hE=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IZXQ6gnOY/bFVwmFfrzNjwYHNKt7tk2ig3Yo+k2NKXI=
+			HAlSA0rizgAhFdhjlyeJXJzoSVt9tyDadhfHhx1dNoc=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8mZnu3Px6QvY+waXND2OzhLV2KZRFYoSsNtk71xOBOg=
+			akgJz9o66EEDxyLHO8Km0e75UjgPhyhP85vL7Z/yAWE=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IZXQ6gnOY/bFVwmFfrzNjwYHNKt7tk2ig3Yo+k2NKXI=
+			HAlSA0rizgAhFdhjlyeJXJzoSVt9tyDadhfHhx1dNoc=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EzurgYtr3gj9J6BGYRm6njanajVBDKUKXeiVn7PjaoY=
+			vxDbSqSsp0SkXXfbYR8OeOMuK99nlHf8JtwnyKlTiLE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ITYdaz7vpeu0Q/4sQbB+KUZEiOxNAqa6Q/eTyt4WP0Y=
+			XFQVi9xkid4e3A8E2fremuGp0M9TZ6fp9idSD5WZ730=
 			</data>
 		</dict>
 	</dict>
