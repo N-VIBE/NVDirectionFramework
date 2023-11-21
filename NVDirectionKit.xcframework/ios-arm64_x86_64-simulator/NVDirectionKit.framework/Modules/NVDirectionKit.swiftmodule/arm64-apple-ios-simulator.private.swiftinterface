@@ -179,13 +179,14 @@ public enum BluetoothType : Swift.String, Swift.Codable {
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, duration: Swift.Double, distance: Swift.Double, information: NVDirectionKit.NVibeMultimodalStepInformation = NVibeMultimodalStepInformation(mode: .WALKING))
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
+@objc open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
   public var bearing_after: Swift.Double
   public var bearing_before: Swift.Double
   public var type: Swift.String
   public var modifier: Swift.String?
   public var location: [Swift.Double]
   public var instruction: Swift.String
+  public init(bearing_after: Swift.Double, bearing_before: Swift.Double, type: Swift.String, modifier: Swift.String?, location: [Swift.Double], instruction: Swift.String)
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws

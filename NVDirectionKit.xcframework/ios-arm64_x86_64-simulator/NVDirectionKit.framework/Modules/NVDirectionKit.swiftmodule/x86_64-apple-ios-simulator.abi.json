@@ -8131,6 +8131,80 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(bearing_after:bearing_before:type:modifier:location:instruction:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NVibeManeuver",
+                "printedName": "NVDirectionKit.NVibeManeuver",
+                "usr": "c:@M@NVDirectionKit@objc(cs)NVibeManeuver"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Double]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14NVDirectionKit13NVibeManeuverC13bearing_after0E7_before4type8modifier8location11instructionACSd_SdS2SSgSaySdGSStcfc",
+            "mangledName": "$s14NVDirectionKit13NVibeManeuverC13bearing_after0E7_before4type8modifier8location11instructionACSd_SdS2SSgSaySdGSStcfc",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init()",
             "children": [
               {
@@ -8220,7 +8294,6 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
-        "hasMissingDesignatedInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -16283,126 +16356,126 @@
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 874,
+      "offset": 881,
       "length": 35,
       "value": "\"bearing_after :: \""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 908,
+      "offset": 915,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 925,
+      "offset": 932,
       "length": 37,
       "value": "\"bearing_before :: \""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 961,
+      "offset": 968,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 978,
+      "offset": 985,
       "length": 17,
       "value": "\"type :: \""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 994,
+      "offset": 1001,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1011,
+      "offset": 1018,
       "length": 25,
       "value": "\"location :: \""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1035,
+      "offset": 1042,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1052,
+      "offset": 1059,
       "length": 31,
       "value": "\"instruction :: \""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1082,
+      "offset": 1089,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1190,
+      "offset": 1197,
       "length": 15,
       "value": "\"bearing_after\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1234,
+      "offset": 1241,
       "length": 16,
       "value": "\"bearing_before\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1280,
+      "offset": 1287,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1306,
+      "offset": 1313,
       "length": 10,
       "value": "\"location\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1340,
+      "offset": 1347,
       "length": 13,
       "value": "\"instruction\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1418,
+      "offset": 1425,
       "length": 10,
       "value": "\"modifier\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1570,
+      "offset": 1577,
       "length": 6,
       "value": "\"exit\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeManeuver.swift",
       "kind": "StringLiteral",
-      "offset": 1903,
+      "offset": 1910,
       "length": 2,
       "value": "\"\""
     },
