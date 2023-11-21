@@ -93,7 +93,6 @@ extension CoreLocation.CLDeviceOrientation {
 }
 @objc @_inheritsConvenienceInitializers open class NVDirection : ObjectiveC.NSObject {
   public static let shared: NVDirectionKit.NVDirection
-  public static let versionNumber: Swift.String
   public func getMultimodalRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, includeFullWalking: Swift.Bool = true, completion: @escaping ([NVDirectionKit.NVibeMultimodalRoute]?, NVDirectionKit.RouteError?) -> Swift.Void)
   public func getNextDeparture(from information: NVDirectionKit.NVibeTransitInformation, count: Swift.Int = 1, completion: @escaping ([Swift.String]) -> Swift.Void)
   public func getStartingDirection(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, completion: @escaping (CoreLocation.CLLocationDirection?, NVDirectionKit.RouteError?) -> Swift.Void)
@@ -239,7 +238,6 @@ public class PhoneState {
 }
 @objc @_inheritsConvenienceInitializers open class NVPhoneStateDetection : ObjectiveC.NSObject {
   public static let shared: NVDirectionKit.NVPhoneStateDetection
-  public static let versionNumber: Swift.String
   public func startPhoneStateDetection(completion: @escaping () -> Swift.Void)
   public func stopPhoneStateDetection()
   public func setFollowedUserDirection(direction: CoreLocation.CLLocationDirection?)

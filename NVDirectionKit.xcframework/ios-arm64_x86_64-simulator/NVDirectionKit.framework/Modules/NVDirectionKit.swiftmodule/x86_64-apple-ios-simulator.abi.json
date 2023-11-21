@@ -3100,57 +3100,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "versionNumber",
-            "printedName": "versionNumber",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14NVDirectionKit0A0C13versionNumberSSvpZ",
-            "mangledName": "$s14NVDirectionKit0A0C13versionNumberSSvpZ",
-            "moduleName": "NVDirectionKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14NVDirectionKit0A0C13versionNumberSSvgZ",
-                "mangledName": "$s14NVDirectionKit0A0C13versionNumberSSvgZ",
-                "moduleName": "NVDirectionKit",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Function",
             "name": "getMultimodalRoute",
             "printedName": "getMultimodalRoute(from:to:includeFullWalking:completion:)",
@@ -3572,6 +3521,7 @@
         "isOpen": true,
         "declAttributes": [
           "AccessControl",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -10207,57 +10157,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "versionNumber",
-            "printedName": "versionNumber",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:14NVDirectionKit21NVPhoneStateDetectionC13versionNumberSSvpZ",
-            "mangledName": "$s14NVDirectionKit21NVPhoneStateDetectionC13versionNumberSSvpZ",
-            "moduleName": "NVDirectionKit",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:14NVDirectionKit21NVPhoneStateDetectionC13versionNumberSSvgZ",
-                "mangledName": "$s14NVDirectionKit21NVPhoneStateDetectionC13versionNumberSSvgZ",
-                "moduleName": "NVDirectionKit",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Function",
             "name": "startPhoneStateDetection",
             "printedName": "startPhoneStateDetection(completion:)",
@@ -15403,29 +15302,22 @@
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirection.swift",
-      "kind": "StringLiteral",
-      "offset": 125,
-      "length": 7,
-      "value": "\"0.1.6\""
-    },
-    {
-      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirection.swift",
       "kind": "BooleanLiteral",
-      "offset": 431,
+      "offset": 435,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirection.swift",
       "kind": "IntegerLiteral",
-      "offset": 1059,
+      "offset": 1063,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVDirection.swift",
       "kind": "StringLiteral",
-      "offset": 2265,
+      "offset": 2269,
       "length": 4,
       "value": "\"en\""
     },
@@ -19051,70 +18943,70 @@
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "BooleanLiteral",
-      "offset": 307,
+      "offset": 309,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "BooleanLiteral",
-      "offset": 539,
+      "offset": 541,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "StringLiteral",
-      "offset": 723,
+      "offset": 725,
       "length": 26,
       "value": "\"startPhoneStateDetection\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "BooleanLiteral",
-      "offset": 813,
+      "offset": 815,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "BooleanLiteral",
-      "offset": 833,
+      "offset": 835,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "BooleanLiteral",
-      "offset": 1115,
+      "offset": 1117,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "StringLiteral",
-      "offset": 1135,
+      "offset": 1137,
       "length": 25,
       "value": "\"stopPhoneStateDetection\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "BooleanLiteral",
-      "offset": 1289,
+      "offset": 1291,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "FloatLiteral",
-      "offset": 1982,
+      "offset": 1984,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/NVPhoneStateDetection.swift",
       "kind": "StringLiteral",
-      "offset": 2609,
+      "offset": 2611,
       "length": 7,
       "value": "\"state\""
     },
