@@ -4290,6 +4290,41 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NVibeRoute",
+                "printedName": "NVDirectionKit.NVibeRoute",
+                "usr": "c:@M@NVDirectionKit@objc(cs)NVibeRoute"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreLocation.CLLocationCoordinate2D]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLLocationCoordinate2D",
+                    "printedName": "CoreLocation.CLLocationCoordinate2D",
+                    "usr": "c:@S@CLLocationCoordinate2D"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14NVDirectionKit10NVibeRouteC4fromACSaySo22CLLocationCoordinate2DVG_tcfc",
+            "mangledName": "$s14NVDirectionKit10NVibeRouteC4fromACSaySo22CLLocationCoordinate2DVG_tcfc",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "toGPX",
             "printedName": "toGPX(speed:)",
@@ -15183,133 +15218,616 @@
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 1134,
+      "offset": 1178,
       "length": 6,
-      "value": "5000.0"
+      "value": "4000.0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 1234,
-      "length": 3,
-      "value": "1e6"
+      "offset": 1187,
+      "length": 4,
+      "value": "60.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 1194,
+      "length": 4,
+      "value": "60.0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "Array",
-      "offset": 1254,
+      "offset": 1241,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 1278,
-      "length": 68,
-      "value": "\"<?xml version=\"1.0\"?>\n<gpx version=\"1.1\" creator=\"Xcode\">\n\""
-    },
-    {
-      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "FloatLiteral",
-      "offset": 1370,
+      "offset": 1272,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "IntegerLiteral",
-      "offset": 1625,
-      "length": 4,
-      "value": "3600"
-    },
-    {
-      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 1716,
-      "length": 153,
-      "value": "\"    <wpt lat=\"\""
-    },
-    {
-      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 1754,
+      "offset": 1383,
       "length": 1,
-      "value": "\"\" lon=\"\""
+      "value": "0"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 1786,
+      "kind": "IntegerLiteral",
+      "offset": 1507,
       "length": 1,
-      "value": "\"\">\n        <time>2014-09-24T\""
-    },
-    {
-      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 1846,
-      "length": 1,
-      "value": "\"Z<\/time>\n    <\/wpt>\n\""
-    },
-    {
-      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
-      "kind": "StringLiteral",
-      "offset": 1898,
-      "length": 8,
-      "value": "\"<\/gpx>\""
+      "value": "1"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "Array",
-      "offset": 2026,
+      "offset": 1571,
+      "length": 6,
+      "value": "[true]"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1593,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1607,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1761,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1794,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 1827,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1942,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 1981,
+      "length": 8,
+      "value": "\"depart\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 2074,
+      "length": 22,
+      "value": "\"Démarrer tout droit\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 2132,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 2168,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2210,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2371,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2398,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 2550,
+      "length": 3,
+      "value": "1e6"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2919,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "Array",
+      "offset": 2983,
+      "length": 6,
+      "value": "[true]"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2995,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3035,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3174,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3207,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 3292,
+      "length": 3,
+      "value": "1e6"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3456,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 3465,
+      "length": 8,
+      "value": "\"arrive\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 3558,
+      "length": 20,
+      "value": "\"Vous êtes arrivé\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 3614,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 3650,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3805,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3886,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "Array",
+      "offset": 3950,
+      "length": 13,
+      "value": "[false, true]"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3969,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3977,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4159,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4183,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 4216,
+      "length": 4,
+      "value": "45.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 4233,
+      "length": 5,
+      "value": "135.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4406,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4433,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 4593,
+      "length": 3,
+      "value": "1e6"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4998,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5035,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 5072,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 5247,
+      "length": 6,
+      "value": "\"turn\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 5265,
+      "length": 6,
+      "value": "\"left\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 5341,
+      "length": 19,
+      "value": "\"Tourner à gauche\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 5400,
+      "length": 6,
+      "value": "\"left\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 5444,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 5485,
+      "length": 5,
+      "value": "225.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 5503,
+      "length": 5,
+      "value": "315.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5677,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5704,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 5864,
+      "length": 3,
+      "value": "1e6"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6269,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6306,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 6343,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 6518,
+      "length": 6,
+      "value": "\"turn\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 6536,
+      "length": 7,
+      "value": "\"right\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 6613,
+      "length": 19,
+      "value": "\"Tourner à droite\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 6672,
+      "length": 7,
+      "value": "\"right\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 6717,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 7477,
+      "length": 4,
+      "value": "\"en\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 7744,
+      "length": 3,
+      "value": "1e6"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 7814,
+      "length": 6,
+      "value": "5000.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 7914,
+      "length": 3,
+      "value": "1e6"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "Array",
+      "offset": 7934,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2121,
+      "offset": 7958,
+      "length": 68,
+      "value": "\"<?xml version=\"1.0\"?>\n<gpx version=\"1.1\" creator=\"Xcode\">\n\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "FloatLiteral",
+      "offset": 8050,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8305,
+      "length": 4,
+      "value": "3600"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 8396,
+      "length": 153,
+      "value": "\"    <wpt lat=\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 8434,
+      "length": 1,
+      "value": "\"\" lon=\"\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 8466,
+      "length": 1,
+      "value": "\"\">\n        <time>2014-09-24T\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 8526,
+      "length": 1,
+      "value": "\"Z<\/time>\n    <\/wpt>\n\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 8578,
+      "length": 8,
+      "value": "\"<\/gpx>\""
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "Array",
+      "offset": 8706,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
+      "kind": "StringLiteral",
+      "offset": 8801,
       "length": 8,
       "value": "\"weight\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2155,
+      "offset": 8835,
       "length": 12,
       "value": "\"voiceLocal\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2197,
+      "offset": 8877,
       "length": 10,
       "value": "\"duration\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2235,
+      "offset": 8915,
       "length": 10,
       "value": "\"distance\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2273,
+      "offset": 8953,
       "length": 13,
       "value": "\"weight_name\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2317,
+      "offset": 8997,
       "length": 10,
       "value": "\"geometry\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Route\/NVibeRoute.swift",
       "kind": "StringLiteral",
-      "offset": 2355,
+      "offset": 9035,
       "length": 6,
       "value": "\"legs\""
     },
