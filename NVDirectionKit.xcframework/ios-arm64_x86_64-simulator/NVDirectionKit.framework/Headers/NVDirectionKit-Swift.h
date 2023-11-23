@@ -299,6 +299,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+
 SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @interface NVDirection : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -712,6 +713,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
 
 SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @interface NVDirection : NSObject

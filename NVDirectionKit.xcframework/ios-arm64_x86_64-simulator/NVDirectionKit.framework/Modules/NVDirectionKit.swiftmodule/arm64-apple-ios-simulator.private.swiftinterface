@@ -7,10 +7,9 @@ import CoreLocation
 import CoreML
 import CoreMotion
 import Foundation
+import MapKit
 @_exported import NVDirectionKit
-import Polyline
 import Swift
-import SwiftyJSON
 import UIKit
 import _Concurrency
 import _StringProcessing
@@ -227,6 +226,28 @@ public class PhoneState {
   public init(state: NVDirectionKit.PhoneState.State, orientation: CoreLocation.CLDeviceOrientation? = nil)
   @objc deinit
 }
+public struct Polyline {
+  public let coordinates: [CoreLocation.CLLocationCoordinate2D]?
+  public let encodedPolyline: Swift.String
+  public let levels: [Swift.UInt32]?
+  public let encodedLevels: Swift.String?
+  public var locations: [CoreLocation.CLLocation]? {
+    get
+  }
+  @available(tvOS 9.2, *)
+  public var mkPolyline: MapKit.MKPolyline? {
+    get
+  }
+  public init(coordinates: [CoreLocation.CLLocationCoordinate2D], levels: [Swift.UInt32]? = nil, precision: Swift.Double = 1e5)
+  public init(encodedPolyline: Swift.String, encodedLevels: Swift.String? = nil, precision: Swift.Double = 1e5)
+  public init(locations: [CoreLocation.CLLocation], levels: [Swift.UInt32]? = nil, precision: Swift.Double = 1e5)
+}
+public func encodeCoordinates(_ coordinates: [CoreLocation.CLLocationCoordinate2D], precision: Swift.Double = 1e5) -> Swift.String
+public func encodeLocations(_ locations: [CoreLocation.CLLocation], precision: Swift.Double = 1e5) -> Swift.String
+public func encodeLevels(_ levels: [Swift.UInt32]) -> Swift.String
+public func decodePolyline(_ encodedPolyline: Swift.String, precision: Swift.Double = 1e5) -> [CoreLocation.CLLocationCoordinate2D]?
+public func decodePolyline(_ encodedPolyline: Swift.String, precision: Swift.Double = 1e5) -> [CoreLocation.CLLocation]?
+public func decodeLevels(_ encodedLevels: Swift.String) -> [Swift.UInt32]?
 @objc open class NVibeMultimodalRoute : ObjectiveC.NSObject {
   public var startAddress: NVDirectionKit.NVibeLocation
   public var endAddress: NVDirectionKit.NVibeLocation
@@ -272,6 +293,369 @@ extension Swift.Array where Element == Swift.Double {
 }
 extension Foundation.NSNotification.Name {
   public static let NOTIFICATION_PHONE_STATE_CHANGED: Foundation.Notification.Name
+}
+@available(*, deprecated, renamed: "SwiftyJSONError.errorDomain", message: "ErrorDomain is deprecated. Use `SwiftyJSONError.errorDomain` instead.")
+public let ErrorDomain: Swift.String
+@available(*, deprecated, renamed: "SwiftyJSONError.unsupportedType", message: "ErrorUnsupportedType is deprecated. Use `SwiftyJSONError.unsupportedType` instead.")
+public let ErrorUnsupportedType: Swift.Int
+@available(*, deprecated, renamed: "SwiftyJSONError.indexOutOfBounds", message: "ErrorIndexOutOfBounds is deprecated. Use `SwiftyJSONError.indexOutOfBounds` instead.")
+public let ErrorIndexOutOfBounds: Swift.Int
+@available(*, deprecated, renamed: "SwiftyJSONError.wrongType", message: "ErrorWrongType is deprecated. Use `SwiftyJSONError.wrongType` instead.")
+public let ErrorWrongType: Swift.Int
+@available(*, deprecated, renamed: "SwiftyJSONError.notExist", message: "ErrorNotExist is deprecated. Use `SwiftyJSONError.notExist` instead.")
+public let ErrorNotExist: Swift.Int
+@available(*, deprecated, renamed: "SwiftyJSONError.invalidJSON", message: "ErrorInvalidJSON is deprecated. Use `SwiftyJSONError.invalidJSON` instead.")
+public let ErrorInvalidJSON: Swift.Int
+public enum SwiftyJSONError : Swift.Int, Swift.Error {
+  case unsupportedType
+  case indexOutOfBounds
+  case elementTooDeep
+  case wrongType
+  case notExist
+  case invalidJSON
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension NVDirectionKit.SwiftyJSONError : Foundation.CustomNSError {
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
+}
+public enum Type : Swift.Int {
+  case number
+  case string
+  case bool
+  case array
+  case dictionary
+  case null
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct JSON {
+  public init(data: Foundation.Data, options opt: Foundation.JSONSerialization.ReadingOptions = []) throws
+  public init(_ object: Any)
+  public init(parseJSON jsonString: Swift.String)
+  @available(*, deprecated, message: "Use instead `init(parseJSON: )`")
+  public static func parse(_ json: Swift.String) -> NVDirectionKit.JSON
+  public mutating func merge(with other: NVDirectionKit.JSON) throws
+  public func merged(with other: NVDirectionKit.JSON) throws -> NVDirectionKit.JSON
+  public var type: NVDirectionKit.`Type` {
+    get
+  }
+  public var error: NVDirectionKit.SwiftyJSONError? {
+    get
+  }
+  public var object: Any {
+    get
+    set
+  }
+  @available(*, unavailable, renamed: "null")
+  public static var nullJSON: NVDirectionKit.JSON {
+    get
+  }
+  public static var null: NVDirectionKit.JSON {
+    get
+  }
+}
+public enum Index<T> : Swift.Comparable {
+  case array(Swift.Int)
+  case dictionary(Swift.DictionaryIndex<Swift.String, T>)
+  case null
+  public static func == (lhs: NVDirectionKit.Index<T>, rhs: NVDirectionKit.Index<T>) -> Swift.Bool
+  public static func < (lhs: NVDirectionKit.Index<T>, rhs: NVDirectionKit.Index<T>) -> Swift.Bool
+}
+public typealias JSONIndex = NVDirectionKit.Index<NVDirectionKit.JSON>
+public typealias JSONRawIndex = NVDirectionKit.Index<Any>
+extension NVDirectionKit.JSON : Swift.Collection {
+  public typealias Index = NVDirectionKit.JSONRawIndex
+  public var startIndex: NVDirectionKit.JSON.Index {
+    get
+  }
+  public var endIndex: NVDirectionKit.JSON.Index {
+    get
+  }
+  public func index(after i: NVDirectionKit.JSON.Index) -> NVDirectionKit.JSON.Index
+  public subscript(position: NVDirectionKit.JSON.Index) -> (Swift.String, NVDirectionKit.JSON) {
+    get
+  }
+  public typealias Element = (Swift.String, NVDirectionKit.JSON)
+  public typealias Indices = Swift.DefaultIndices<NVDirectionKit.JSON>
+  public typealias Iterator = Swift.IndexingIterator<NVDirectionKit.JSON>
+  public typealias SubSequence = Swift.Slice<NVDirectionKit.JSON>
+}
+public enum JSONKey {
+  case index(Swift.Int)
+  case key(Swift.String)
+}
+public protocol JSONSubscriptType {
+  var jsonKey: NVDirectionKit.JSONKey { get }
+}
+extension Swift.Int : NVDirectionKit.JSONSubscriptType {
+  public var jsonKey: NVDirectionKit.JSONKey {
+    get
+  }
+}
+extension Swift.String : NVDirectionKit.JSONSubscriptType {
+  public var jsonKey: NVDirectionKit.JSONKey {
+    get
+  }
+}
+extension NVDirectionKit.JSON {
+  public subscript(path: [any NVDirectionKit.JSONSubscriptType]) -> NVDirectionKit.JSON {
+    get
+    set
+  }
+  public subscript(path: any NVDirectionKit.JSONSubscriptType...) -> NVDirectionKit.JSON {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public init(extendedGraphemeClusterLiteral value: Swift.StringLiteralType)
+  public init(unicodeScalarLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.IntegerLiteralType)
+  public typealias IntegerLiteralType = Swift.IntegerLiteralType
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.BooleanLiteralType)
+  public typealias BooleanLiteralType = Swift.BooleanLiteralType
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.FloatLiteralType)
+  public typealias FloatLiteralType = Swift.FloatLiteralType
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, Any)...)
+  public typealias Key = Swift.String
+  public typealias Value = Any
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Any...)
+  public typealias ArrayLiteralElement = Any
+}
+extension NVDirectionKit.JSON : Swift.ExpressibleByNilLiteral {
+  @available(*, deprecated, message: "use JSON.null instead. Will be removed in future versions")
+  public init(nilLiteral: ())
+}
+extension NVDirectionKit.JSON : Swift.RawRepresentable {
+  public init?(rawValue: Any)
+  public var rawValue: Any {
+    get
+  }
+  public func rawData(options opt: Foundation.JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Foundation.Data
+  public func rawString(_ encoding: Swift.String.Encoding = .utf8, options opt: Foundation.JSONSerialization.WritingOptions = .prettyPrinted) -> Swift.String?
+  public func rawString(_ options: [NVDirectionKit.writingOptionsKeys : Any]) -> Swift.String?
+  public typealias RawValue = Any
+}
+extension NVDirectionKit.JSON : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension NVDirectionKit.JSON {
+  public var array: [NVDirectionKit.JSON]? {
+    get
+  }
+  public var arrayValue: [NVDirectionKit.JSON] {
+    get
+  }
+  public var arrayObject: [Any]? {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON {
+  public var dictionary: [Swift.String : NVDirectionKit.JSON]? {
+    get
+  }
+  public var dictionaryValue: [Swift.String : NVDirectionKit.JSON] {
+    get
+  }
+  public var dictionaryObject: [Swift.String : Any]? {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON {
+  public var bool: Swift.Bool? {
+    get
+    set
+  }
+  public var boolValue: Swift.Bool {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON {
+  public var string: Swift.String? {
+    get
+    set
+  }
+  public var stringValue: Swift.String {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON {
+  public var number: Foundation.NSNumber? {
+    get
+    set
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON {
+  public var null: Foundation.NSNull? {
+    get
+    set
+  }
+  public func exists() -> Swift.Bool
+}
+extension NVDirectionKit.JSON {
+  public var url: Foundation.URL? {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON {
+  public var double: Swift.Double? {
+    get
+    set
+  }
+  public var doubleValue: Swift.Double {
+    get
+    set
+  }
+  public var float: Swift.Float? {
+    get
+    set
+  }
+  public var floatValue: Swift.Float {
+    get
+    set
+  }
+  public var int: Swift.Int? {
+    get
+    set
+  }
+  public var intValue: Swift.Int {
+    get
+    set
+  }
+  public var uInt: Swift.UInt? {
+    get
+    set
+  }
+  public var uIntValue: Swift.UInt {
+    get
+    set
+  }
+  public var int8: Swift.Int8? {
+    get
+    set
+  }
+  public var int8Value: Swift.Int8 {
+    get
+    set
+  }
+  public var uInt8: Swift.UInt8? {
+    get
+    set
+  }
+  public var uInt8Value: Swift.UInt8 {
+    get
+    set
+  }
+  public var int16: Swift.Int16? {
+    get
+    set
+  }
+  public var int16Value: Swift.Int16 {
+    get
+    set
+  }
+  public var uInt16: Swift.UInt16? {
+    get
+    set
+  }
+  public var uInt16Value: Swift.UInt16 {
+    get
+    set
+  }
+  public var int32: Swift.Int32? {
+    get
+    set
+  }
+  public var int32Value: Swift.Int32 {
+    get
+    set
+  }
+  public var uInt32: Swift.UInt32? {
+    get
+    set
+  }
+  public var uInt32Value: Swift.UInt32 {
+    get
+    set
+  }
+  public var int64: Swift.Int64? {
+    get
+    set
+  }
+  public var int64Value: Swift.Int64 {
+    get
+    set
+  }
+  public var uInt64: Swift.UInt64? {
+    get
+    set
+  }
+  public var uInt64Value: Swift.UInt64 {
+    get
+    set
+  }
+}
+extension NVDirectionKit.JSON : Swift.Comparable {
+}
+public func == (lhs: NVDirectionKit.JSON, rhs: NVDirectionKit.JSON) -> Swift.Bool
+public func <= (lhs: NVDirectionKit.JSON, rhs: NVDirectionKit.JSON) -> Swift.Bool
+public func >= (lhs: NVDirectionKit.JSON, rhs: NVDirectionKit.JSON) -> Swift.Bool
+public func > (lhs: NVDirectionKit.JSON, rhs: NVDirectionKit.JSON) -> Swift.Bool
+public func < (lhs: NVDirectionKit.JSON, rhs: NVDirectionKit.JSON) -> Swift.Bool
+public enum writingOptionsKeys {
+  case jsonSerialization
+  case castNilToNSNull
+  case maxObjextDepth
+  case encoding
+  public static func == (a: NVDirectionKit.writingOptionsKeys, b: NVDirectionKit.writingOptionsKeys) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @objc open class NVibeLeg : ObjectiveC.NSObject {
   public var distance: Swift.Double
@@ -332,3 +716,11 @@ extension NVDirectionKit.PhoneState.State : Swift.Hashable {}
 extension NVDirectionKit.TokenError : Swift.Equatable {}
 extension NVDirectionKit.TokenError : Swift.Hashable {}
 extension NVDirectionKit.TokenError : Swift.RawRepresentable {}
+extension NVDirectionKit.SwiftyJSONError : Swift.Equatable {}
+extension NVDirectionKit.SwiftyJSONError : Swift.Hashable {}
+extension NVDirectionKit.SwiftyJSONError : Swift.RawRepresentable {}
+extension NVDirectionKit.`Type` : Swift.Equatable {}
+extension NVDirectionKit.`Type` : Swift.Hashable {}
+extension NVDirectionKit.`Type` : Swift.RawRepresentable {}
+extension NVDirectionKit.writingOptionsKeys : Swift.Equatable {}
+extension NVDirectionKit.writingOptionsKeys : Swift.Hashable {}
