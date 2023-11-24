@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NVDirectionKit-Swift.h</key>
 		<data>
-		6+aYs1+PYaun6Sgi7oCuJfHWzLw=
+		+j1PEMjAF1Prm9+7DZvsIq2XMJU=
 		</data>
 		<key>Headers/NVDirectionKit.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		haArHyeIYdgcjrxWyxkk8Qs8Y1g=
+		TLUDUg2uhEw2QFW4Wc5ngyxvtaQ=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lemD/7MBgHzrRF1EORgAF6LpuJk=
+		PUEwX4R+sw1t3piL5MTL3LeoVcI=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dn3tx1H2EqCfLoO1TDXgKJWmkcA=
+		8HQSzvIJFIlu5ZXERHn+xjY9Hi8=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		haArHyeIYdgcjrxWyxkk8Qs8Y1g=
+		TLUDUg2uhEw2QFW4Wc5ngyxvtaQ=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		GMn7G+j7m3LGA/K3q2egY+MOr5M=
+		27VMEwTXZt49pAGbKTi8rxc8IKA=
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3G94pc8YVC+Nb1zqYNE48YbCpQ0=
+		UOuAv5EM8e3K1a3HGuVA8YiXYl0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/VHeWkJ90bJNqbffeMXlPWlStptFFne56j6VN50Yodw=
+			l93kKHSOHHvS22qVJkWDiOPhoTHZESecmUH91qV+ykw=
 			</data>
 		</dict>
 		<key>Headers/NVDirectionKit.h</key>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Ljyn110DBM1VwvgbPFwrMr6q2WDvGa53WHyf+7/ItQ=
+			ukyPIq0x+yCZDXgJyfdyTxXwf4IjOQNCO4x3uVuXuk4=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -95,7 +95,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			thwNrHPSkrz92nL/Quxu5gHK9o1iE1RTtoOusXSM1sM=
+			H5WoSBzjCF1W0S2folDjffwcn17ahw55dYmWcEUyvSQ=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
@@ -109,14 +109,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Nz0B1tIzGgaixsi3xW3jbZcua7so3k2nRMNpDKV3AI=
+			juOUjWi7g/p/YkWR5LqYrzRzTZ5ZyW6AZpcbxLioD4o=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Ljyn110DBM1VwvgbPFwrMr6q2WDvGa53WHyf+7/ItQ=
+			ukyPIq0x+yCZDXgJyfdyTxXwf4IjOQNCO4x3uVuXuk4=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -130,7 +130,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			88kTgSHs8zW6K3QbFplHbPRrw0EfnynDCjK6SP9jlTY=
+			FPQiV/81jzlIY2JVGdZ4XoMe0LcU+0Wbhlpv248WGOE=
 			</data>
 		</dict>
 		<key>Modules/NVDirectionKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pcnc6SU++QVjj9sW5nAsVBvA+pb4Yz3y2k78nHfs8qg=
+			I6vhlRJ5baTudVwjsuYnDj4gi6Ztxvlmnhr0PffEAO4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

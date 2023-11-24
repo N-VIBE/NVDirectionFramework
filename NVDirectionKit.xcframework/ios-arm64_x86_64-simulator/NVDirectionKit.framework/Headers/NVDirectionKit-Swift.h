@@ -300,12 +300,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__OBJC__)
 
 
+/// NVDirection is used to get multiple data from our API
 SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @interface NVDirection : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// NVPhoneStateDetection is used to detect if the phone is in hand or in pocket, it’s useful for indoor navigation
 SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
 @interface NVPhoneStateDetection : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -313,6 +315,7 @@ SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
 
 
 
+/// NVSDKTokenValidation is used to validate your SDK Token
 SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
 @interface NVSDKTokenValidation : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -715,12 +718,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__OBJC__)
 
 
+/// NVDirection is used to get multiple data from our API
 SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @interface NVDirection : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// NVPhoneStateDetection is used to detect if the phone is in hand or in pocket, it’s useful for indoor navigation
 SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
 @interface NVPhoneStateDetection : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -728,6 +733,7 @@ SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
 
 
 
+/// NVSDKTokenValidation is used to validate your SDK Token
 SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
 @interface NVSDKTokenValidation : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
