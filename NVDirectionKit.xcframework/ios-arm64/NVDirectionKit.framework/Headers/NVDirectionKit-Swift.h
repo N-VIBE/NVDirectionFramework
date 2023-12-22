@@ -357,6 +357,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit13NVibeManeuver")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit19NVibeManeuverDetail")
+@interface NVibeManeuverDetail : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit20NVibeMultimodalRoute")
 @interface NVibeMultimodalRoute : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

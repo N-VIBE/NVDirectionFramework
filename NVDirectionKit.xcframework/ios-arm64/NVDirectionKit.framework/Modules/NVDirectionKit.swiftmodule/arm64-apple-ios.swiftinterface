@@ -74,6 +74,16 @@ import _SwiftConcurrencyShims
   public func getDuration() -> Swift.Double
   @objc deinit
 }
+@objc open class NVibeManeuverDetail : ObjectiveC.NSObject, Swift.Codable {
+  public var type: Swift.String
+  public var modifier: Swift.String?
+  public var name: Swift.String?
+  public var instruction: Swift.String
+  public init(type: Swift.String, modifier: Swift.String? = nil, name: Swift.String? = nil, instruction: Swift.String)
+  @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
 @objc @_hasMissingDesignatedInitializers open class NVibeLocation : ObjectiveC.NSObject {
   public var address: Swift.String
   public var position: CoreLocation.CLLocationCoordinate2D
@@ -99,6 +109,22 @@ extension CoreLocation.CLDeviceOrientation {
   public func cancelRoute()
   @objc override dynamic public init()
   @objc deinit
+}
+public struct RouteResponse : Swift.Codable {
+  public var code: Swift.Int
+  public var data: NVDirectionKit.RouteData?
+  public var success: Swift.Bool
+  public var message: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RouteData : Swift.Codable {
+  public var distance: Swift.Double
+  public var duration: Swift.Double
+  public var geometry: Swift.String
+  public var legs: [NVDirectionKit.NVibeLeg]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc open class NVibeRoute : ObjectiveC.NSObject {
   public var startAddress: NVDirectionKit.NVibeLocation
@@ -161,7 +187,7 @@ public enum BluetoothType : Swift.String, Swift.Codable {
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_hasMissingDesignatedInitializers open class NVibeIntersection : ObjectiveC.NSObject {
+@objc @_hasMissingDesignatedInitializers open class NVibeIntersection : ObjectiveC.NSObject, Swift.Codable {
   public var entry: [Swift.Bool]
   public var `in`: Swift.Int?
   public var out: Swift.Int?
@@ -170,6 +196,8 @@ public enum BluetoothType : Swift.String, Swift.Codable {
   public var location: [Swift.Double]
   public init(entry: [Swift.Bool], in: Swift.Int?, out: Swift.Int?, bearings: [Swift.Double], location: [Swift.Double], index: Swift.Int)
   @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc open class NVibeMultimodalStep : ObjectiveC.NSObject {
   public var startAddress: NVDirectionKit.NVibeLocation
@@ -180,15 +208,19 @@ public enum BluetoothType : Swift.String, Swift.Codable {
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, information: NVDirectionKit.NVibeMultimodalStepInformation = NVibeMultimodalStepInformation(mode: .WALKING))
   @objc deinit
 }
-@objc open class NVibeManeuver : ObjectiveC.NSObject {
+@objc open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
   public var bearing_before: Swift.Double
   public var bearing_after: Swift.Double
   public var type: Swift.String
   public var modifier: Swift.String?
   public var location: [Swift.Double]
   public var instruction: Swift.String
-  public init(bearing_before: Swift.Double, bearing_after: Swift.Double, type: Swift.String, modifier: Swift.String?, location: [Swift.Double], instruction: Swift.String)
+  public var turn_direction: Swift.Int?
+  public var details: [NVDirectionKit.NVibeManeuverDetail]
+  public init(bearing_before: Swift.Double, bearing_after: Swift.Double, type: Swift.String, modifier: Swift.String?, location: [Swift.Double], instruction: Swift.String, details: [NVDirectionKit.NVibeManeuverDetail] = [])
   @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum RouteError {
   case noConnection, noRoute, invalidToken, unknow
@@ -657,7 +689,7 @@ public enum writingOptionsKeys {
     get
   }
 }
-@objc open class NVibeLeg : ObjectiveC.NSObject {
+@objc open class NVibeLeg : ObjectiveC.NSObject, Swift.Codable {
   public var distance: Swift.Double
   public var duration: Swift.Double {
     get
@@ -666,8 +698,10 @@ public enum writingOptionsKeys {
   public var steps: [NVDirectionKit.NVibeStep]
   public init(distance: Swift.Double, duration: Swift.Double, steps: [NVDirectionKit.NVibeStep])
   @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
-@objc open class NVibeStep : ObjectiveC.NSObject {
+@objc open class NVibeStep : ObjectiveC.NSObject, Swift.Codable {
   public var intersections: [NVDirectionKit.NVibeIntersection]
   public var distance: Swift.Double
   public var mode: Swift.String
@@ -690,6 +724,8 @@ public enum writingOptionsKeys {
   public init(distance: Swift.Double, duration: Swift.Double, geometry: Swift.String, intersections: [NVDirectionKit.NVibeIntersection], maneuver: NVDirectionKit.NVibeManeuver, walkingSide: Swift.String, streetName: Swift.String)
   public func getTurnHourDirection() -> Swift.Int
   @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 extension NVDirectionKit.NVibeMultimodalStepInformation.Mode : Swift.Equatable {}
 extension NVDirectionKit.NVibeMultimodalStepInformation.Mode : Swift.Hashable {}
