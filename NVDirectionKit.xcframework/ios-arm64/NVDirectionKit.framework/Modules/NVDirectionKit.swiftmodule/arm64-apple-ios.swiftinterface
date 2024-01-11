@@ -102,13 +102,24 @@ extension CoreLocation.CLDeviceOrientation {
 }
 @objc @_inheritsConvenienceInitializers open class NVDirection : ObjectiveC.NSObject {
   public static let shared: NVDirectionKit.NVDirection
-  public func getMultimodalRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, includeFullWalking: Swift.Bool = true, completion: @escaping ([NVDirectionKit.NVibeMultimodalRoute]?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func getMultimodalRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, includeFullWalking: Swift.Bool = true, completion: @escaping ([NVDirectionKit.NVibeMultimodalRoute]?, NVDirectionKit.MultimodalError?) -> Swift.Void)
   public func getNextDeparture(from information: NVDirectionKit.NVibeTransitInformation, count: Swift.Int = 1, completion: @escaping ([Swift.String]) -> Swift.Void)
   public func getStartingDirection(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, completion: @escaping (CoreLocation.CLLocationDirection?, NVDirectionKit.RouteError?) -> Swift.Void)
-  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", withObstacle: Swift.Bool = false, completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
   public func cancelRoute()
   @objc override dynamic public init()
   @objc deinit
+}
+@objc open class NVibeObstacle : ObjectiveC.NSObject, Swift.Codable {
+  public var id: Swift.String
+  public var type: Swift.String
+  public var position: [Swift.Double]
+  public var projection: [Swift.Double]
+  public var photo: Swift.String?
+  public var distance: Swift.Double?
+  @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct RouteResponse : Swift.Codable {
   public var code: Swift.Int
@@ -138,7 +149,7 @@ public struct RouteData : Swift.Codable {
   public var legs: [NVDirectionKit.NVibeLeg]
   public var geometry: Swift.String
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, language: Swift.String = "en", distance: Swift.Double, duration: Swift.Double, geometry: Swift.String, legs: [NVDirectionKit.NVibeLeg])
-  public init(from coordinates: [CoreLocation.CLLocationCoordinate2D])
+  public init(from coordinates: [CoreLocation.CLLocationCoordinate2D], language: Swift.String = "en")
   public func toGPX(speed: Swift.Double = 5000.0) -> Swift.String
   public func toDictionnary() -> [Swift.String : Any]
   @objc deinit
@@ -231,6 +242,19 @@ public enum RouteError {
   }
 }
 extension NVDirectionKit.RouteError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum MultimodalError {
+  case noConnection, noMultimodalRoute, invalidToken, outOfScope, multipleRegion, unknow
+  public static func == (a: NVDirectionKit.MultimodalError, b: NVDirectionKit.MultimodalError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension NVDirectionKit.MultimodalError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
     get
   }
@@ -713,6 +737,7 @@ public enum writingOptionsKeys {
   }
   public var name: Swift.String
   public var vibrations: [NVDirectionKit.NVibeVibration]
+  public var obstacles: [NVDirectionKit.NVibeObstacle]?
   public var walkingSide: Swift.String {
     get
     set
@@ -722,7 +747,6 @@ public enum writingOptionsKeys {
     set
   }
   public init(distance: Swift.Double, duration: Swift.Double, geometry: Swift.String, intersections: [NVDirectionKit.NVibeIntersection], maneuver: NVDirectionKit.NVibeManeuver, walkingSide: Swift.String, streetName: Swift.String)
-  public func getTurnHourDirection() -> Swift.Int
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -744,6 +768,8 @@ extension NVDirectionKit.BluetoothType : Swift.Hashable {}
 extension NVDirectionKit.BluetoothType : Swift.RawRepresentable {}
 extension NVDirectionKit.RouteError : Swift.Equatable {}
 extension NVDirectionKit.RouteError : Swift.Hashable {}
+extension NVDirectionKit.MultimodalError : Swift.Equatable {}
+extension NVDirectionKit.MultimodalError : Swift.Hashable {}
 extension NVDirectionKit.SideStreet : Swift.Equatable {}
 extension NVDirectionKit.SideStreet : Swift.Hashable {}
 extension NVDirectionKit.SideStreet : Swift.RawRepresentable {}

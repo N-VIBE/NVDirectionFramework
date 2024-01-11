@@ -385,6 +385,11 @@ SWIFT_CLASS("_TtC14NVDirectionKit30NVibeMultimodalStepInformation")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit13NVibeObstacle")
+@interface NVibeObstacle : NSObject
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit10NVibeRoute")
 @interface NVibeRoute : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
