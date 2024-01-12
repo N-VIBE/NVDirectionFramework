@@ -140,7 +140,6 @@ public struct RouteData : Swift.Codable {
 @objc open class NVibeRoute : ObjectiveC.NSObject {
   public var startAddress: NVDirectionKit.NVibeLocation
   public var endAddress: NVDirectionKit.NVibeLocation
-  public var language: Swift.String
   public var duration: Swift.Double {
     get
     set
@@ -148,8 +147,9 @@ public struct RouteData : Swift.Codable {
   public var distance: Swift.Double
   public var legs: [NVDirectionKit.NVibeLeg]
   public var geometry: Swift.String
-  public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, language: Swift.String = "en", distance: Swift.Double, duration: Swift.Double, geometry: Swift.String, legs: [NVDirectionKit.NVibeLeg])
-  public init(from coordinates: [CoreLocation.CLLocationCoordinate2D], language: Swift.String = "en")
+  public var option: NVDirectionKit.NVibeRouteOption
+  public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, geometry: Swift.String, legs: [NVDirectionKit.NVibeLeg], option: NVDirectionKit.NVibeRouteOption = NVibeRouteOption())
+  public init(from coordinates: [CoreLocation.CLLocationCoordinate2D])
   public func toGPX(speed: Swift.Double = 5000.0) -> Swift.String
   public func toDictionnary() -> [Swift.String : Any]
   @objc deinit
@@ -158,6 +158,12 @@ public struct RouteData : Swift.Codable {
   public var floor: Swift.Int
   public var altitude: Swift.Double
   public init(address: Swift.String? = nil, position: CoreLocation.CLLocationCoordinate2D, access: CoreLocation.CLLocationCoordinate2D? = nil, floor: Swift.Int, altitude: Swift.Double = 0.0)
+  @objc deinit
+}
+@objc open class NVibeRouteOption : ObjectiveC.NSObject {
+  public var language: Swift.String
+  public var withObstacle: Swift.Bool
+  public init(language: Swift.String = "en", withObstacle: Swift.Bool = false)
   @objc deinit
 }
 public enum BluetoothCommand : Swift.String, Swift.Codable {

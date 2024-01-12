@@ -397,6 +397,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit10NVibeRoute")
 @end
 
 
+SWIFT_CLASS("_TtC14NVDirectionKit16NVibeRouteOption")
+@interface NVibeRouteOption : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC14NVDirectionKit9NVibeStep")
 @interface NVibeStep : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -822,6 +829,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit13NVibeObstacle")
 
 SWIFT_CLASS("_TtC14NVDirectionKit10NVibeRoute")
 @interface NVibeRoute : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC14NVDirectionKit16NVibeRouteOption")
+@interface NVibeRouteOption : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
