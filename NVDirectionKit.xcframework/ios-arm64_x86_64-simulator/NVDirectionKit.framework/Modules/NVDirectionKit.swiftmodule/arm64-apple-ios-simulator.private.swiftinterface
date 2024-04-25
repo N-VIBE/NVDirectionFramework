@@ -65,6 +65,8 @@ import _SwiftConcurrencyShims
   public var stops: [NVDirectionKit.NVibeLocation]
   public var departureTime: Swift.String
   public var duration: Swift.Double
+  public var departureRef: Swift.String
+  public var arrivalRef: Swift.String
   public init(transitMode: NVDirectionKit.NVibeTransitInformation.Mode, headsign: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, type: Swift.String, line: Swift.String, stops: [NVDirectionKit.NVibeLocation], departureTime: Swift.String, duration: Swift.Double)
   public init(transitMode: Swift.String, headsign: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, type: Swift.String, line: Swift.String, stops: [NVDirectionKit.NVibeLocation], departureTime: Swift.String, duration: Swift.Double, id: Swift.String)
   public func stopNumber() -> Swift.Int
@@ -92,7 +94,14 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 extension CoreLocation.CLLocationCoordinate2D {
+  public func moveCoordinate(distance: CoreLocation.CLLocationDistance, direction: CoreLocation.CLLocationDirection) -> CoreLocation.CLLocationCoordinate2D
+  public func moveCoordinate(distance: CoreLocation.CLLocationDistance, direction: CoreLocation.CLLocationDirection, side: Swift.String) -> CoreLocation.CLLocationCoordinate2D?
+  public func moveCoordinate(distance: CoreLocation.CLLocationDistance, direction: CoreLocation.CLLocationDirection, side: NVDirectionKit.SideStreet) -> CoreLocation.CLLocationCoordinate2D?
+  public func projectOnSegment(from A: CoreLocation.CLLocationCoordinate2D, to B: CoreLocation.CLLocationCoordinate2D) -> CoreLocation.CLLocationCoordinate2D
   public func projectOn(polyline: [CoreLocation.CLLocationCoordinate2D]) -> (projection: CoreLocation.CLLocationCoordinate2D, distance: Swift.Double, index: Swift.Int, onEdge: Swift.Bool, onExtremity: Swift.Bool)
+}
+extension Swift.Array where Element == CoreLocation.CLLocationCoordinate2D {
+  public func getDistance() -> Swift.Double?
 }
 extension CoreLocation.CLLocationCoordinate2D : Swift.Equatable {
 }
@@ -105,7 +114,8 @@ extension CoreLocation.CLDeviceOrientation {
   public func getMultimodalRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, includeFullWalking: Swift.Bool = true, completion: @escaping ([NVDirectionKit.NVibeMultimodalRoute]?, NVDirectionKit.MultimodalError?) -> Swift.Void)
   public func getNextDeparture(from information: NVDirectionKit.NVibeTransitInformation, count: Swift.Int = 1, completion: @escaping ([Swift.String]) -> Swift.Void)
   public func getStartingDirection(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, completion: @escaping (CoreLocation.CLLocationDirection?, NVDirectionKit.RouteError?) -> Swift.Void)
-  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", withObstacle: Swift.Bool = false, completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", withObstacle: Swift.Bool = false, withAlternativePolyline: Swift.Bool = false, completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func getCustomNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, with coordinates: [CoreLocation.CLLocationCoordinate2D], language: Swift.String = "en", completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection)?, NVDirectionKit.RouteError?) -> Swift.Void)
   public func cancelRoute()
   @objc override dynamic public init()
   @objc deinit
@@ -147,9 +157,9 @@ public struct RouteData : Swift.Codable {
   public var distance: Swift.Double
   public var legs: [NVDirectionKit.NVibeLeg]
   public var geometry: Swift.String
+  public var alternativeGeometry: Swift.String?
   public var option: NVDirectionKit.NVibeRouteOption
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, geometry: Swift.String, legs: [NVDirectionKit.NVibeLeg], option: NVDirectionKit.NVibeRouteOption = NVibeRouteOption())
-  public init(from coordinates: [CoreLocation.CLLocationCoordinate2D])
   public func toGPX(speed: Swift.Double = 5000.0) -> Swift.String
   public func toDictionnary() -> [Swift.String : Any]
   @objc deinit
@@ -159,202 +169,6 @@ public struct RouteData : Swift.Codable {
   public var altitude: Swift.Double
   public init(address: Swift.String? = nil, position: CoreLocation.CLLocationCoordinate2D, access: CoreLocation.CLLocationCoordinate2D? = nil, floor: Swift.Int, altitude: Swift.Double = 0.0)
   @objc deinit
-}
-@objc open class NVibeRouteOption : ObjectiveC.NSObject {
-  public var language: Swift.String
-  public var withObstacle: Swift.Bool
-  public init(language: Swift.String = "en", withObstacle: Swift.Bool = false)
-  @objc deinit
-}
-public enum BluetoothCommand : Swift.String, Swift.Codable {
-  case SHORT_VIBRATION
-  case UTURN_VIBRATION
-  case LONG_VIBRATION
-  case LONG_CROSS_VIBRATION
-  case DOUBLE_VIBRATION
-  case TRIPLE_VIBRATION_FAST
-  case TRIPLE_VIBRATION
-  case TRIPLE_VIBRATION_AND_SHORT
-  case QUINTUPLE_VIBRATION
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum BluetoothType : Swift.String, Swift.Codable {
-  case LEFT
-  case RIGHT
-  case BOTH
-  case ALTERNATE
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@objc open class NVibeVibration : ObjectiveC.NSObject, Swift.Codable {
-  public var type: NVDirectionKit.BluetoothType
-  public var command: NVDirectionKit.BluetoothCommand
-  public var delay: Swift.Double
-  public init(type: NVDirectionKit.BluetoothType, command: NVDirectionKit.BluetoothCommand, delay: Swift.Double = 0.0)
-  public static func getBluetoothCommand(text: Swift.String) -> NVDirectionKit.BluetoothCommand
-  public static func getBluetoothType(text: Swift.String) -> NVDirectionKit.BluetoothType
-  @objc deinit
-  open func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-@objc @_hasMissingDesignatedInitializers open class NVibeIntersection : ObjectiveC.NSObject, Swift.Codable {
-  public var entry: [Swift.Bool]
-  public var `in`: Swift.Int?
-  public var out: Swift.Int?
-  public var geometry_index: Swift.Int
-  public var bearings: [Swift.Double]
-  public var location: [Swift.Double]
-  public init(entry: [Swift.Bool], in: Swift.Int?, out: Swift.Int?, bearings: [Swift.Double], location: [Swift.Double], index: Swift.Int)
-  @objc deinit
-  open func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-@objc open class NVibeMultimodalStep : ObjectiveC.NSObject {
-  public var startAddress: NVDirectionKit.NVibeLocation
-  public var endAddress: NVDirectionKit.NVibeLocation
-  public var distance: Swift.Double
-  public var duration: Swift.Double
-  public var information: NVDirectionKit.NVibeMultimodalStepInformation
-  public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, information: NVDirectionKit.NVibeMultimodalStepInformation = NVibeMultimodalStepInformation(mode: .WALKING))
-  @objc deinit
-}
-@objc open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
-  public var bearing_before: Swift.Double
-  public var bearing_after: Swift.Double
-  public var type: Swift.String
-  public var modifier: Swift.String?
-  public var location: [Swift.Double]
-  public var instruction: Swift.String
-  public var turn_direction: Swift.Int?
-  public var details: [NVDirectionKit.NVibeManeuverDetail]
-  public init(bearing_before: Swift.Double, bearing_after: Swift.Double, type: Swift.String, modifier: Swift.String?, location: [Swift.Double], instruction: Swift.String, details: [NVDirectionKit.NVibeManeuverDetail] = [])
-  @objc deinit
-  open func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
-}
-public enum RouteError {
-  case noConnection, noRoute, invalidToken, unknow
-  public static func == (a: NVDirectionKit.RouteError, b: NVDirectionKit.RouteError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-extension NVDirectionKit.RouteError : Foundation.LocalizedError {
-  public var errorDescription: Swift.String? {
-    get
-  }
-}
-public enum MultimodalError {
-  case noConnection, noMultimodalRoute, invalidToken, outOfScope, multipleRegion, unknow
-  public static func == (a: NVDirectionKit.MultimodalError, b: NVDirectionKit.MultimodalError) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-extension NVDirectionKit.MultimodalError : Foundation.LocalizedError {
-  public var errorDescription: Swift.String? {
-    get
-  }
-}
-public enum SideStreet : Swift.String {
-  case LEFT
-  case RIGHT
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public class PhoneState {
-  public enum State {
-    case POCKET, HAND, TRANSITION
-    public static func == (a: NVDirectionKit.PhoneState.State, b: NVDirectionKit.PhoneState.State) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public var state: NVDirectionKit.PhoneState.State
-  public var orientation: CoreLocation.CLDeviceOrientation?
-  public init(state: NVDirectionKit.PhoneState.State, orientation: CoreLocation.CLDeviceOrientation? = nil)
-  @objc deinit
-}
-public struct Polyline {
-  public let coordinates: [CoreLocation.CLLocationCoordinate2D]?
-  public let encodedPolyline: Swift.String
-  public let levels: [Swift.UInt32]?
-  public let encodedLevels: Swift.String?
-  public var locations: [CoreLocation.CLLocation]? {
-    get
-  }
-  @available(tvOS 9.2, *)
-  public var mkPolyline: MapKit.MKPolyline? {
-    get
-  }
-  public init(coordinates: [CoreLocation.CLLocationCoordinate2D], levels: [Swift.UInt32]? = nil, precision: Swift.Double = 1e5)
-  public init(encodedPolyline: Swift.String, encodedLevels: Swift.String? = nil, precision: Swift.Double = 1e5)
-  public init(locations: [CoreLocation.CLLocation], levels: [Swift.UInt32]? = nil, precision: Swift.Double = 1e5)
-}
-public func encodeCoordinates(_ coordinates: [CoreLocation.CLLocationCoordinate2D], precision: Swift.Double = 1e5) -> Swift.String
-public func encodeLocations(_ locations: [CoreLocation.CLLocation], precision: Swift.Double = 1e5) -> Swift.String
-public func encodeLevels(_ levels: [Swift.UInt32]) -> Swift.String
-public func decodePolyline(_ encodedPolyline: Swift.String, precision: Swift.Double = 1e5) -> [CoreLocation.CLLocationCoordinate2D]?
-public func decodePolyline(_ encodedPolyline: Swift.String, precision: Swift.Double = 1e5) -> [CoreLocation.CLLocation]?
-public func decodeLevels(_ encodedLevels: Swift.String) -> [Swift.UInt32]?
-@objc open class NVibeMultimodalRoute : ObjectiveC.NSObject {
-  public var startAddress: NVDirectionKit.NVibeLocation
-  public var endAddress: NVDirectionKit.NVibeLocation
-  public var distance: Swift.Double
-  public var duration: Swift.Double
-  public var steps: [NVDirectionKit.NVibeMultimodalStep]
-  public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, steps: [NVDirectionKit.NVibeMultimodalStep])
-  public func description()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers open class NVPhoneStateDetection : ObjectiveC.NSObject {
-  public static let shared: NVDirectionKit.NVPhoneStateDetection
-  public func startPhoneStateDetection(completion: @escaping () -> Swift.Void)
-  public func stopPhoneStateDetection()
-  public func setFollowedUserDirection(direction: CoreLocation.CLLocationDirection?)
-  public func getOffsetFromUserDirection() -> Swift.Double?
-  public func getUserDirection() -> Swift.Double?
-  public func getCurrentPhoneState() -> NVDirectionKit.PhoneState
-  @objc override dynamic public init()
-  @objc deinit
-}
-public enum TokenError : Swift.Int {
-  case INVALID_TOKEN
-  case MAX_ACTIVE_USER_REACHED
-  case UNKNOW
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NVSDKTokenValidation : ObjectiveC.NSObject {
-  public static let shared: NVDirectionKit.NVSDKTokenValidation
-  public func isValid(completion: @escaping (NVDirectionKit.TokenError?) -> Swift.Void)
-  @objc deinit
-}
-extension Swift.Double {
-  public func toRadian() -> Swift.Double
-  public func toDegree() -> Swift.Double
-}
-extension Swift.Array where Element == Swift.Double {
-  public func getMedian() -> Swift.Double?
-}
-extension Foundation.NSNotification.Name {
-  public static let NOTIFICATION_PHONE_STATE_CHANGED: Foundation.Notification.Name
 }
 @available(*, deprecated, renamed: "SwiftyJSONError.errorDomain", message: "ErrorDomain is deprecated. Use `SwiftyJSONError.errorDomain` instead.")
 public let ErrorDomain: Swift.String
@@ -719,6 +533,212 @@ public enum writingOptionsKeys {
     get
   }
 }
+@objc open class NVibeRouteOption : ObjectiveC.NSObject {
+  public var language: Swift.String
+  public var withObstacle: Swift.Bool
+  public var withAlternativeGeometry: Swift.Bool
+  public init(language: Swift.String = "en", withObstacle: Swift.Bool = false, withAlternativeGeometry: Swift.Bool = false)
+  @objc deinit
+}
+public enum BluetoothCommand : Swift.String, Swift.Codable {
+  case SHORT_VIBRATION
+  case UTURN_VIBRATION
+  case LONG_VIBRATION
+  case LONG_CROSS_VIBRATION
+  case DOUBLE_VIBRATION
+  case TRIPLE_VIBRATION_FAST
+  case TRIPLE_VIBRATION
+  case TRIPLE_VIBRATION_AND_SHORT
+  case QUINTUPLE_VIBRATION
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BluetoothType : Swift.String, Swift.Codable {
+  case LEFT
+  case RIGHT
+  case BOTH
+  case ALTERNATE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc open class NVibeVibration : ObjectiveC.NSObject, Swift.Codable {
+  public var type: NVDirectionKit.BluetoothType
+  public var command: NVDirectionKit.BluetoothCommand
+  public var delay: Swift.Double
+  public init(type: NVDirectionKit.BluetoothType, command: NVDirectionKit.BluetoothCommand, delay: Swift.Double = 0.0)
+  public static func getBluetoothCommand(text: Swift.String) -> NVDirectionKit.BluetoothCommand
+  public static func getBluetoothType(text: Swift.String) -> NVDirectionKit.BluetoothType
+  @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_hasMissingDesignatedInitializers open class NVibeIntersection : ObjectiveC.NSObject, Swift.Codable {
+  public var entry: [Swift.Bool]
+  public var `in`: Swift.Int?
+  public var out: Swift.Int?
+  public var geometry_index: Swift.Int
+  public var bearings: [Swift.Double]
+  public var location: [Swift.Double]
+  public init(entry: [Swift.Bool], in: Swift.Int?, out: Swift.Int?, bearings: [Swift.Double], location: [Swift.Double], index: Swift.Int)
+  @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc open class NVibeMultimodalStep : ObjectiveC.NSObject {
+  public var startAddress: NVDirectionKit.NVibeLocation
+  public var endAddress: NVDirectionKit.NVibeLocation
+  public var distance: Swift.Double
+  public var duration: Swift.Double
+  public var information: NVDirectionKit.NVibeMultimodalStepInformation
+  public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, information: NVDirectionKit.NVibeMultimodalStepInformation = NVibeMultimodalStepInformation(mode: .WALKING))
+  @objc deinit
+}
+@objc open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
+  public var bearing_before: Swift.Double
+  public var bearing_after: Swift.Double
+  public var type: Swift.String
+  public var modifier: Swift.String?
+  public var location: [Swift.Double]
+  public var instruction: Swift.String
+  public var turn_direction: Swift.Int?
+  public var details: [NVDirectionKit.NVibeManeuverDetail]
+  public init(bearing_before: Swift.Double, bearing_after: Swift.Double, type: Swift.String, modifier: Swift.String?, location: [Swift.Double], instruction: Swift.String, details: [NVDirectionKit.NVibeManeuverDetail] = [])
+  @objc deinit
+  open func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum RouteError {
+  case noConnection, noRoute, invalidToken, unknow
+  public static func == (a: NVDirectionKit.RouteError, b: NVDirectionKit.RouteError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension NVDirectionKit.RouteError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum MultimodalError {
+  case noConnection, noMultimodalRoute, invalidToken, outOfScope, multipleRegion, unknow
+  public static func == (a: NVDirectionKit.MultimodalError, b: NVDirectionKit.MultimodalError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension NVDirectionKit.MultimodalError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum SideStreet : Swift.String {
+  case LEFT
+  case RIGHT
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class PhoneState {
+  public enum State {
+    case POCKET, HAND, TRANSITION
+    public static func == (a: NVDirectionKit.PhoneState.State, b: NVDirectionKit.PhoneState.State) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var state: NVDirectionKit.PhoneState.State
+  public var orientation: CoreLocation.CLDeviceOrientation?
+  public init(state: NVDirectionKit.PhoneState.State, orientation: CoreLocation.CLDeviceOrientation? = nil)
+  @objc deinit
+}
+public class Attitude {
+  public var pitch: Swift.Double
+  public var roll: Swift.Double
+  public var yaw: Swift.Double
+  public var handHeading: Swift.Double?
+  public var pocketHeading: Swift.Double?
+  public init(pitch: Swift.Double, roll: Swift.Double, yaw: Swift.Double, phoneState: NVDirectionKit.PhoneState)
+  @objc deinit
+}
+@objc open class NVibeMultimodalRoute : ObjectiveC.NSObject {
+  public var startAddress: NVDirectionKit.NVibeLocation
+  public var endAddress: NVDirectionKit.NVibeLocation
+  public var distance: Swift.Double
+  public var duration: Swift.Double
+  public var steps: [NVDirectionKit.NVibeMultimodalStep]
+  public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, steps: [NVDirectionKit.NVibeMultimodalStep])
+  public func description()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class NVPhoneStateDetection : ObjectiveC.NSObject {
+  public static let shared: NVDirectionKit.NVPhoneStateDetection
+  public func startPhoneStateDetection(completion: @escaping () -> Swift.Void)
+  public func stopPhoneStateDetection()
+  public func setFollowedUserDirection(direction: CoreLocation.CLLocationDirection?)
+  public func getOffsetFromUserDirection() -> Swift.Double?
+  public func getUserDirection() -> Swift.Double?
+  public func getCurrentPhoneState() -> NVDirectionKit.PhoneState
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum TokenError : Swift.Int {
+  case INVALID_TOKEN
+  case MAX_ACTIVE_USER_REACHED
+  case UNKNOW
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NVSDKTokenValidation : ObjectiveC.NSObject {
+  public static let shared: NVDirectionKit.NVSDKTokenValidation
+  public func isValid(completion: @escaping (NVDirectionKit.TokenError?) -> Swift.Void)
+  @objc deinit
+}
+extension Swift.Double {
+  public func toRadian() -> Swift.Double
+  public func toDegree() -> Swift.Double
+}
+extension Swift.Array where Element == Swift.Double {
+  public func getMedian() -> Swift.Double?
+}
+public struct Polyline {
+  public let coordinates: [CoreLocation.CLLocationCoordinate2D]?
+  public let encodedPolyline: Swift.String
+  public let levels: [Swift.UInt32]?
+  public let encodedLevels: Swift.String?
+  public var locations: [CoreLocation.CLLocation]? {
+    get
+  }
+  @available(tvOS 9.2, *)
+  public var mkPolyline: MapKit.MKPolyline? {
+    get
+  }
+  public init(coordinates: [CoreLocation.CLLocationCoordinate2D], levels: [Swift.UInt32]? = nil, precision: Swift.Double = 1e5)
+  public init(encodedPolyline: Swift.String, encodedLevels: Swift.String? = nil, precision: Swift.Double = 1e5)
+  public init(locations: [CoreLocation.CLLocation], levels: [Swift.UInt32]? = nil, precision: Swift.Double = 1e5)
+}
+public func encodeCoordinates(_ coordinates: [CoreLocation.CLLocationCoordinate2D], precision: Swift.Double = 1e5) -> Swift.String
+public func encodeLocations(_ locations: [CoreLocation.CLLocation], precision: Swift.Double = 1e5) -> Swift.String
+public func encodeLevels(_ levels: [Swift.UInt32]) -> Swift.String
+public func decodePolyline(_ encodedPolyline: Swift.String, precision: Swift.Double = 1e5) -> [CoreLocation.CLLocationCoordinate2D]?
+public func decodePolyline(_ encodedPolyline: Swift.String, precision: Swift.Double = 1e5) -> [CoreLocation.CLLocation]?
+public func decodeLevels(_ encodedLevels: Swift.String) -> [Swift.UInt32]?
+extension Foundation.NSNotification.Name {
+  public static let NOTIFICATION_PHONE_STATE_CHANGED: Foundation.Notification.Name
+}
 @objc open class NVibeLeg : ObjectiveC.NSObject, Swift.Codable {
   public var distance: Swift.Double
   public var duration: Swift.Double {
@@ -766,6 +786,14 @@ extension NVDirectionKit.NVibeWalkingInformation.Mode : Swift.RawRepresentable {
 extension NVDirectionKit.NVibeTransitInformation.Mode : Swift.Equatable {}
 extension NVDirectionKit.NVibeTransitInformation.Mode : Swift.Hashable {}
 extension NVDirectionKit.NVibeTransitInformation.Mode : Swift.RawRepresentable {}
+extension NVDirectionKit.SwiftyJSONError : Swift.Equatable {}
+extension NVDirectionKit.SwiftyJSONError : Swift.Hashable {}
+extension NVDirectionKit.SwiftyJSONError : Swift.RawRepresentable {}
+extension NVDirectionKit.`Type` : Swift.Equatable {}
+extension NVDirectionKit.`Type` : Swift.Hashable {}
+extension NVDirectionKit.`Type` : Swift.RawRepresentable {}
+extension NVDirectionKit.writingOptionsKeys : Swift.Equatable {}
+extension NVDirectionKit.writingOptionsKeys : Swift.Hashable {}
 extension NVDirectionKit.BluetoothCommand : Swift.Equatable {}
 extension NVDirectionKit.BluetoothCommand : Swift.Hashable {}
 extension NVDirectionKit.BluetoothCommand : Swift.RawRepresentable {}
@@ -784,11 +812,3 @@ extension NVDirectionKit.PhoneState.State : Swift.Hashable {}
 extension NVDirectionKit.TokenError : Swift.Equatable {}
 extension NVDirectionKit.TokenError : Swift.Hashable {}
 extension NVDirectionKit.TokenError : Swift.RawRepresentable {}
-extension NVDirectionKit.SwiftyJSONError : Swift.Equatable {}
-extension NVDirectionKit.SwiftyJSONError : Swift.Hashable {}
-extension NVDirectionKit.SwiftyJSONError : Swift.RawRepresentable {}
-extension NVDirectionKit.`Type` : Swift.Equatable {}
-extension NVDirectionKit.`Type` : Swift.Hashable {}
-extension NVDirectionKit.`Type` : Swift.RawRepresentable {}
-extension NVDirectionKit.writingOptionsKeys : Swift.Equatable {}
-extension NVDirectionKit.writingOptionsKeys : Swift.Hashable {}
