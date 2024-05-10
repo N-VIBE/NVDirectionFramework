@@ -65,8 +65,8 @@ import _SwiftConcurrencyShims
   public var stops: [NVDirectionKit.NVibeLocation]
   public var departureTime: Swift.String
   public var duration: Swift.Double
-  public var departureRef: Swift.String
-  public var arrivalRef: Swift.String
+  public var departureRef: Swift.String?
+  public var arrivalRef: Swift.String?
   public init(transitMode: NVDirectionKit.NVibeTransitInformation.Mode, headsign: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, type: Swift.String, line: Swift.String, stops: [NVDirectionKit.NVibeLocation], departureTime: Swift.String, duration: Swift.Double)
   public init(transitMode: Swift.String, headsign: Swift.String, backgroundColor: Swift.String, textColor: Swift.String, type: Swift.String, line: Swift.String, stops: [NVDirectionKit.NVibeLocation], departureTime: Swift.String, duration: Swift.Double, id: Swift.String)
   public func stopNumber() -> Swift.Int
@@ -114,7 +114,7 @@ extension CoreLocation.CLDeviceOrientation {
   public func getMultimodalRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, includeFullWalking: Swift.Bool = true, completion: @escaping ([NVDirectionKit.NVibeMultimodalRoute]?, NVDirectionKit.MultimodalError?) -> Swift.Void)
   public func getNextDeparture(from information: NVDirectionKit.NVibeTransitInformation, count: Swift.Int = 1, completion: @escaping ([Swift.String]) -> Swift.Void)
   public func getStartingDirection(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, completion: @escaping (CoreLocation.CLLocationDirection?, NVDirectionKit.RouteError?) -> Swift.Void)
-  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", withObstacle: Swift.Bool = false, withAlternativePolyline: Swift.Bool = false, completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
+  public func getNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, sideStreet: NVDirectionKit.SideStreet? = nil, language: Swift.String = "en", withObstacle: Swift.Bool = false, forbiddenObstacles: [Swift.String] = [], withAlternativePolyline: Swift.Bool = false, completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection, solutionFound: Swift.Bool)?, NVDirectionKit.RouteError?) -> Swift.Void)
   public func getCustomNavigationRoute(from startLocation: NVDirectionKit.NVibeLocation, to endLocation: NVDirectionKit.NVibeLocation, with coordinates: [CoreLocation.CLLocationCoordinate2D], language: Swift.String = "en", completion: @escaping ((route: NVDirectionKit.NVibeRoute, startingDirection: CoreLocation.CLLocationDirection)?, NVDirectionKit.RouteError?) -> Swift.Void)
   public func cancelRoute()
   @objc override dynamic public init()
