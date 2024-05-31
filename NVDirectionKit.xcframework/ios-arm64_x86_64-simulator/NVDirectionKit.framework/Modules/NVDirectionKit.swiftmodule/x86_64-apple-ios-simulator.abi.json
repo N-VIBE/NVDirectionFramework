@@ -331,6 +331,64 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "getWalkingInformation",
+            "printedName": "getWalkingInformation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NVDirectionKit.NVibeWalkingInformation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NVibeWalkingInformation",
+                    "printedName": "NVDirectionKit.NVibeWalkingInformation",
+                    "usr": "c:@M@NVDirectionKit@objc(cs)NVibeWalkingInformation"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14NVDirectionKit30NVibeMultimodalStepInformationC010getWalkingF0AA0chF0CSgyF",
+            "mangledName": "$s14NVDirectionKit30NVibeMultimodalStepInformationC010getWalkingF0AA0chF0CSgyF",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTransitInformation",
+            "printedName": "getTransitInformation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NVDirectionKit.NVibeTransitInformation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NVibeTransitInformation",
+                    "printedName": "NVDirectionKit.NVibeTransitInformation",
+                    "usr": "c:@M@NVDirectionKit@objc(cs)NVibeTransitInformation"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14NVDirectionKit30NVibeMultimodalStepInformationC010getTransitF0AA0chF0CSgyF",
+            "mangledName": "$s14NVDirectionKit30NVibeMultimodalStepInformationC010getTransitF0AA0chF0CSgyF",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -875,6 +933,226 @@
                 "declKind": "Accessor",
                 "usr": "s:14NVDirectionKit23NVibeWalkingInformationC11walkingModeAC0G0OvM",
                 "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC11walkingModeAC0G0OvM",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "departureRef",
+            "printedName": "departureRef",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvp",
+            "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvp",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvg",
+                "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvg",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvs",
+                "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvs",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvM",
+                "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC12departureRefSSSgvM",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "arrivalRef",
+            "printedName": "arrivalRef",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvp",
+            "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvp",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvg",
+                "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvg",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvs",
+                "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvs",
+                "moduleName": "NVDirectionKit",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvM",
+                "mangledName": "$s14NVDirectionKit23NVibeWalkingInformationC10arrivalRefSSSgvM",
                 "moduleName": "NVDirectionKit",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -18516,6 +18794,69 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Function",
+            "name": "isWalkingStep",
+            "printedName": "isWalkingStep()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14NVDirectionKit19NVibeMultimodalStepC09isWalkingE0SbyF",
+            "mangledName": "$s14NVDirectionKit19NVibeMultimodalStepC09isWalkingE0SbyF",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isIndoorStep",
+            "printedName": "isIndoorStep()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14NVDirectionKit19NVibeMultimodalStepC08isIndoorE0SbyF",
+            "mangledName": "$s14NVDirectionKit19NVibeMultimodalStepC08isIndoorE0SbyF",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isTransitStep",
+            "printedName": "isTransitStep()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14NVDirectionKit19NVibeMultimodalStepC09isTransitE0SbyF",
+            "mangledName": "$s14NVDirectionKit19NVibeMultimodalStepC09isTransitE0SbyF",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -20626,6 +20967,28 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "toModifier",
+            "printedName": "toModifier()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14NVDirectionKit10SideStreetO10toModifierSSyF",
+            "mangledName": "$s14NVDirectionKit10SideStreetO10toModifierSSyF",
+            "moduleName": "NVDirectionKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -28637,112 +29000,112 @@
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 590,
+      "offset": 848,
       "length": 9,
       "value": "\"DEFAULT\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 880,
       "length": 8,
       "value": "\"INDOOR\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 590,
+      "offset": 848,
       "length": 9,
       "value": "\"DEFAULT\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 880,
       "length": 8,
       "value": "\"INDOOR\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 478,
+      "offset": 736,
       "length": 23,
       "value": "\"NVDirectionKit.NVibeWalkingInformation\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2807,
+      "offset": 3154,
       "length": 6,
       "value": "\"TRAM\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2835,
+      "offset": 3182,
       "length": 7,
       "value": "\"TRAIN\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2865,
+      "offset": 3212,
       "length": 8,
       "value": "\"SUBWAY\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2893,
+      "offset": 3240,
       "length": 5,
       "value": "\"BUS\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2807,
+      "offset": 3154,
       "length": 6,
       "value": "\"TRAM\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2835,
+      "offset": 3182,
       "length": 7,
       "value": "\"TRAIN\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2865,
+      "offset": 3212,
       "length": 8,
       "value": "\"SUBWAY\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2893,
+      "offset": 3240,
       "length": 5,
       "value": "\"BUS\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "Array",
-      "offset": 3167,
+      "offset": 3514,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 3893,
+      "offset": 4240,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/macpron-vibe\/Desktop\/Application\/NVDirectionKit\/NVDirectionKit\/Sources\/NVDirectionKit\/Model\/Multimodal\/NVibeMultimodalStepInformation.swift",
       "kind": "StringLiteral",
-      "offset": 2698,
+      "offset": 3045,
       "length": 23,
       "value": "\"NVDirectionKit.NVibeTransitInformation\""
     },

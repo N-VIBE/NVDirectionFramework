@@ -26,6 +26,8 @@ import _SwiftConcurrencyShims
   }
   public var mode: NVDirectionKit.NVibeMultimodalStepInformation.Mode
   public init(mode: NVDirectionKit.NVibeMultimodalStepInformation.Mode)
+  public func getWalkingInformation() -> NVDirectionKit.NVibeWalkingInformation?
+  public func getTransitInformation() -> NVDirectionKit.NVibeTransitInformation?
   @objc deinit
 }
 @objc open class NVibeWalkingInformation : NVDirectionKit.NVibeMultimodalStepInformation {
@@ -41,6 +43,8 @@ import _SwiftConcurrencyShims
   public var startAddress: NVDirectionKit.NVibeLocation
   public var endAddress: NVDirectionKit.NVibeLocation
   public var walkingMode: NVDirectionKit.NVibeWalkingInformation.Mode
+  public var departureRef: Swift.String?
+  public var arrivalRef: Swift.String?
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, walkingMode: NVDirectionKit.NVibeWalkingInformation.Mode)
   @objc deinit
 }
@@ -597,6 +601,9 @@ public enum BluetoothType : Swift.String, Swift.Codable {
   public var duration: Swift.Double
   public var information: NVDirectionKit.NVibeMultimodalStepInformation
   public init(startAddress: NVDirectionKit.NVibeLocation, endAddress: NVDirectionKit.NVibeLocation, distance: Swift.Double, duration: Swift.Double, information: NVDirectionKit.NVibeMultimodalStepInformation = NVibeMultimodalStepInformation(mode: .WALKING))
+  public func isWalkingStep() -> Swift.Bool
+  public func isIndoorStep() -> Swift.Bool
+  public func isTransitStep() -> Swift.Bool
   @objc deinit
 }
 @objc open class NVibeManeuver : ObjectiveC.NSObject, Swift.Codable {
@@ -647,6 +654,9 @@ public enum SideStreet : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+extension NVDirectionKit.SideStreet {
+  public func toModifier() -> Swift.String
 }
 public class PhoneState {
   public enum State {
