@@ -307,6 +307,14 @@ SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @end
 
 
+/// NVPhoneDirection is used to detect the phone orientation during outdoor navigation
+SWIFT_CLASS("_TtC14NVDirectionKit16NVPhoneDirection")
+@interface NVPhoneDirection : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 /// NVPhoneStateDetection is used to detect if the phone is in hand or in pocket, it’s useful for indoor navigation
 SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
 @interface NVPhoneStateDetection : NSObject
@@ -323,15 +331,10 @@ SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
 @end
 
 
-SWIFT_CLASS("_TtC14NVDirectionKit13NVibeLocation")
-@interface NVibeLocation : NSObject
+SWIFT_CLASS("_TtC14NVDirectionKit19NVibeIndoorLocation")
+@interface NVibeIndoorLocation : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC14NVDirectionKit19NVibeIndoorLocation")
-@interface NVibeIndoorLocation : NVibeLocation
 @end
 
 
@@ -348,6 +351,12 @@ SWIFT_CLASS("_TtC14NVDirectionKit8NVibeLeg")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC14NVDirectionKit13NVibeLocation")
+@interface NVibeLocation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit13NVibeManeuver")
@@ -387,6 +396,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit30NVibeMultimodalStepInformation")
 
 SWIFT_CLASS("_TtC14NVDirectionKit13NVibeObstacle")
 @interface NVibeObstacle : NSObject
+@end
+
+
+SWIFT_CLASS("_TtC14NVDirectionKit15NVibeProjection")
+@interface NVibeProjection : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -744,6 +760,14 @@ SWIFT_CLASS("_TtC14NVDirectionKit11NVDirection")
 @end
 
 
+/// NVPhoneDirection is used to detect the phone orientation during outdoor navigation
+SWIFT_CLASS("_TtC14NVDirectionKit16NVPhoneDirection")
+@interface NVPhoneDirection : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 /// NVPhoneStateDetection is used to detect if the phone is in hand or in pocket, it’s useful for indoor navigation
 SWIFT_CLASS("_TtC14NVDirectionKit21NVPhoneStateDetection")
 @interface NVPhoneStateDetection : NSObject
@@ -760,15 +784,10 @@ SWIFT_CLASS("_TtC14NVDirectionKit20NVSDKTokenValidation")
 @end
 
 
-SWIFT_CLASS("_TtC14NVDirectionKit13NVibeLocation")
-@interface NVibeLocation : NSObject
+SWIFT_CLASS("_TtC14NVDirectionKit19NVibeIndoorLocation")
+@interface NVibeIndoorLocation : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC14NVDirectionKit19NVibeIndoorLocation")
-@interface NVibeIndoorLocation : NVibeLocation
 @end
 
 
@@ -785,6 +804,12 @@ SWIFT_CLASS("_TtC14NVDirectionKit8NVibeLeg")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC14NVDirectionKit13NVibeLocation")
+@interface NVibeLocation : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 SWIFT_CLASS("_TtC14NVDirectionKit13NVibeManeuver")
@@ -824,6 +849,13 @@ SWIFT_CLASS("_TtC14NVDirectionKit30NVibeMultimodalStepInformation")
 
 SWIFT_CLASS("_TtC14NVDirectionKit13NVibeObstacle")
 @interface NVibeObstacle : NSObject
+@end
+
+
+SWIFT_CLASS("_TtC14NVDirectionKit15NVibeProjection")
+@interface NVibeProjection : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
