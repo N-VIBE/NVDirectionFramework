@@ -6,40 +6,43 @@ NVDirectionKit is a kit to get route from N-Vibe.
 
 To use NVDirectionKit, some requirements are needed.
 
-   - ## Installation
+## Dependency
 
-     - ## Dependency
+NVDirectionKit is available from Cocoapods. Add it to your `podfile`:
 
-       NVDirectionKit is only available via Cocoapods for now.
+```ruby
+platform :ios, '13.0'
 
-       ```ruby
-       platform :ios, '13.0'
+target 'TargetNameForYourApp' do
+use_frameworks!
 
-       target 'TargetNameForYourApp' do
-         use_frameworks!
-         
-         pod 'NVDirectionKit', '~> 0.5.0'
-       end
-       ```
-     - ## Token
-       
-       You need one token with the key NVibeAPIAccessToken to get the route from the N-Vibe calculator.
+pod 'NVDirectionKit', '~> 0.5.0'
+end
+```
 
-       ```
-       <key>NVibeAPIAccessToken</key>
-       <string>YourToken</string>
-       ```
+Don't forget to install your pod by running:
 
-     - ## Http request permission
-    
-       To use NVDirectionKit, you need also a temporary permission to allow http request, this will change later.
+```ruby
+pod install --repo-update
+```
 
-       To add this permission, you need to add this key in your Info.plist.
+## Token
+  
+You need a token with the key `NVibeAPIAccessToken` to receive route from the framework. You can add it in your `Info.plist`.
 
-       ```
-       <key>NSAppTransportSecurity</key>
-       <dict>
-         <key>NSAllowsArbitraryLoads</key>
-         <true/>
-       </dict>
-       ```
+```
+<key>NVibeAPIAccessToken</key>
+<string>YourToken</string>
+```
+
+## Http request permission
+
+To use NVDirectionKit, you need also a temporary permission to allow http request, this will change later. You can add it in your `Info.plist`.
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
