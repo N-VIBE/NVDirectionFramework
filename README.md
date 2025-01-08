@@ -1,10 +1,10 @@
-# N-Vibe Direction SDK for iOS [0.5.0]
+# N-Vibe Direction SDK for iOS [0.6.1]
 
 NVDirectionKit is a kit to get route from N-Vibe.
 
 ## Get started
 
-To use NVDirectionKit, some requirements are needed.
+To use NVDirectionKit, some requirements are needed. For more information, see [Documentation](https://n-vibe.github.io/NVDirectionFramework/).
 
 ## Dependency
 
@@ -16,7 +16,7 @@ platform :ios, '13.0'
 target 'TargetNameForYourApp' do
 use_frameworks!
 
-pod 'NVDirectionKit', '~> 0.5.0'
+pod 'NVDirectionKit', '~> 0.6.1'
 end
 ```
 
